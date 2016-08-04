@@ -1,2 +1,3 @@
-String 5 path 9 world 123 readerConsole readLine12 123.1 world FileReader world fileReader new world FileReader;
+C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
+String. 5 path 9. world 123. readerConsole readLine12 123.1 world. FileReader world fileReader new world FileReader;
 world.

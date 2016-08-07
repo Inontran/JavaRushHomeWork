@@ -43,7 +43,10 @@ public class Solution {
         String result = outputStream.toString();
 
         //дублируем вывод всего текста в файл, имя которого вы считали
-        fileWriter.write(result);
+        if(fileWriter !=null) {
+            fileWriter.write(result);
+            fileWriter.close();
+        }
 
         //Возвращаем все как было
         System.setOut(consoleStream);

@@ -1,6 +1,1 @@
-Петров файл вид
-Сидоров вид В
-Иванов файл вид В
-Петров 3 3 1995
-Иванов Иван Иванович 31 12 1987
-Вася 15 5 2013
+C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt,qwwg3443gerger,qwwdd54,Переменная,

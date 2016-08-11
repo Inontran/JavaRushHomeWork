@@ -1,9 +1,11 @@
 C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
-qwe wqe12 qwewqw 12
-qwe1
-qwwg3443gerger
-qwwdd54
-13
-Это стоит 1 бакс, а вот это - 12 .
-Переменная имеет имя file1.
-110 - это число.
+строка1
+строка2
+строка3
+строка4
+строка5
+строка1
+строка2
+строка3
+строка4
+строка5

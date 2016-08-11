@@ -1,1 +1,12 @@
-C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt,qwwg3443gerger,qwwdd54,Переменная,
+C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
+строка1
+
+строка3
+
+строка5
+строка0
+строка1
+
+строка3
+строка5
+строка4

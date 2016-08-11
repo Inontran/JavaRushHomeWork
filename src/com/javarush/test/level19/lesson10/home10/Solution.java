@@ -15,7 +15,7 @@ public class Solution {
 
     public static void main(String... args) throws IOException {
         try (
-                FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Inontran\\output.txt");//вернуть обратно
+                FileOutputStream outputStream = new FileOutputStream("c:/output.txt");
                 InputStream is = Solution.class.getClassLoader().getResourceAsStream("/user/resources/avatar.gif");
         ) {
             ;
@@ -42,13 +42,12 @@ public class Solution {
                 }
             }
 
-            if (result instanceof A) {
+            if (result instanceof C) {
                 C p = (C) result;
                 System.out.println(p.getClass().getSimpleName());
             }
 
         } catch (IOException e) {
-            e.printStackTrace();//удалить
         }
     }
 

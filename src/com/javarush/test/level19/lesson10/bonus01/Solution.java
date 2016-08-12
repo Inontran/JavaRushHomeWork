@@ -48,8 +48,9 @@ public class Solution {
         }
 
         //сравниваем строки
-        if (stringList1.size() < stringList2.size()) addLines(stringList1, stringList2);
-        else addLines(stringList2, stringList1);
+//        if (stringList1.size() < stringList2.size()) addLines(stringList1, stringList2);
+//        else addLines(stringList2, stringList1);
+        addLines(stringList1, stringList2);
 
         //проверка
         for (int i = 0; i < lines.size(); i++){
@@ -65,20 +66,26 @@ public class Solution {
     public static void addLines(List<String> stringList1, List<String> stringList2){
         int y = 0;
         for (int i = 0; i < stringList1.size(); i++){
-            i += y;
-            if (stringList1.get(i).equals(stringList2.get(i)))
+            if (stringList1.get(i).equals(stringList2.get(i + y)))
             {
                 lines.add(new LineItem(Type.SAME, stringList1.get(i)));
             } else
             {
-                if (stringList1.get(i).equals(stringList2.get(i + 1)))
+                if (stringList1.get(i).equals(stringList2.get(i + y + 1)))
                 {
-                    lines.add(new LineItem(Type.ADDED, stringList2.get(i)));
+                    lines.add(new LineItem(Type.ADDED, stringList2.get(i + y)));
+                    lines.add(new LineItem(Type.SAME, stringList1.get(i)));
                     y++;
                 }
-                else lines.add(new LineItem(Type.REMOVED, stringList1.get(i)));
+                else
+                {
+                    lines.add(new LineItem(Type.REMOVED, stringList1.get(i)));
+                    y--;
+                }
             }
         }
+        if (stringList1.size() < stringList2.size()) lines.add(new LineItem(Type.ADDED, stringList2.get(stringList2.size()-1)));
+        if (stringList1.size() > stringList2.size()) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
     }
 
 

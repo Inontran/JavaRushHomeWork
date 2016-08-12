@@ -65,7 +65,13 @@ public class Solution {
 
     public static void addLines(List<String> stringList1, List<String> stringList2){
         int y = 0;
-        for (int i = 0; i < stringList1.size(); i++){
+        int sizeList = 0;
+        boolean flag = false;
+        if (stringList1.size() > stringList2.size()){
+            sizeList = stringList1.size() - 1;
+            flag = true;
+        }
+        for (int i = 0; i < sizeList; i++){
             if (stringList1.get(i).equals(stringList2.get(i + y)))
             {
                 lines.add(new LineItem(Type.SAME, stringList1.get(i)));
@@ -84,8 +90,9 @@ public class Solution {
                 }
             }
         }
-        if (stringList1.size() < stringList2.size()) lines.add(new LineItem(Type.ADDED, stringList2.get(stringList2.size()-1)));
-        if (stringList1.size() > stringList2.size()) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
+//        if (stringList1.size() < stringList2.size()) lines.add(new LineItem(Type.ADDED, stringList2.get(stringList2.size()-1)));
+//        if (stringList1.size() > stringList2.size()) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
+        if (flag) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
     }
 
 

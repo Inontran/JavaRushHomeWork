@@ -4,8 +4,3 @@ C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
 строка3
 строка4
 строка5
-строка1
-строка2
-строка3
-строка4
-строка5

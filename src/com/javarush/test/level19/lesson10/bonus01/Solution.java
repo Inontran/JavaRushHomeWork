@@ -34,44 +34,37 @@ public class Solution {
     {
         //открываем потоки на чтение
         BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader fileReader1 = new BufferedReader(new FileReader(consoleReader.readLine()));
-        BufferedReader fileReader2 = new BufferedReader(new FileReader(consoleReader.readLine()));
+        BufferedReader fileReader = new BufferedReader(new FileReader(consoleReader.readLine()));
 
         //записываем в списки строки для удобного сравнения
         List<String> stringList1 = new ArrayList<>();
         List<String> stringList2 = new ArrayList<>();
-        while (fileReader1.ready()){
-            stringList1.add(fileReader1.readLine());
+        while (fileReader.ready()){
+            stringList1.add(fileReader.readLine());
         }
-        while (fileReader2.ready()){
-            stringList2.add(fileReader2.readLine());
+        fileReader.close();
+
+        fileReader = new BufferedReader(new FileReader(consoleReader.readLine()));
+        while (fileReader.ready()){
+            stringList2.add(fileReader.readLine());
         }
 
-        //сравниваем строки
-//        if (stringList1.size() < stringList2.size()) addLines(stringList1, stringList2);
-//        else addLines(stringList2, stringList1);
+        //сравниваем строки и добавляем в общий список
         addLines(stringList1, stringList2);
-
-        //проверка
-        for (int i = 0; i < lines.size(); i++){
-            System.out.println(lines.get(i).type + " " + lines.get(i).line);
-        }
 
         //закрываем потоки на чтение
         if (consoleReader!=null) consoleReader.close();
-        if (fileReader1!=null) fileReader1.close();
-        if (fileReader2!=null) fileReader2.close();
+        if (fileReader!=null) fileReader.close();
     }
 
     public static void addLines(List<String> stringList1, List<String> stringList2){
-        int y = 0;
-        int sizeList = 0;
-        boolean flag = false;
-        if (stringList1.size() > stringList2.size()){
-            sizeList = stringList1.size() - 1;
-            flag = true;
-        }
-        for (int i = 0; i < sizeList; i++){
+        int y = 0;//отвечает за смещение "каретки" во 2 списке в зависимости от найденного элемента
+        for (int i = 0; i < stringList1.size(); i++){
+            //добавляем последний элемент из 1 списка если 2 список подошел к концу, а первый нет
+            if (i + y == stringList2.size() && i == stringList1.size() - 1){
+                lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
+                break;
+            }
             if (stringList1.get(i).equals(stringList2.get(i + y)))
             {
                 lines.add(new LineItem(Type.SAME, stringList1.get(i)));
@@ -81,18 +74,15 @@ public class Solution {
                 {
                     lines.add(new LineItem(Type.ADDED, stringList2.get(i + y)));
                     lines.add(new LineItem(Type.SAME, stringList1.get(i)));
-                    y++;
+                    y++;//смещаем "каретку" к концу списка
                 }
                 else
                 {
                     lines.add(new LineItem(Type.REMOVED, stringList1.get(i)));
-                    y--;
+                    y--;////смещаем "каретку" к началу списка
                 }
             }
         }
-//        if (stringList1.size() < stringList2.size()) lines.add(new LineItem(Type.ADDED, stringList2.get(stringList2.size()-1)));
-//        if (stringList1.size() > stringList2.size()) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
-        if (flag) lines.add(new LineItem(Type.REMOVED, stringList1.get(stringList1.size()-1)));
     }
 
 

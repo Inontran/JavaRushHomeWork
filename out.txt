@@ -1,9 +1,8 @@
 C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
 строка1
-строка3
-строка5
 строка0
-строка1
+строка2
+строка0
 строка3
-строка5
+строка0
 строка4

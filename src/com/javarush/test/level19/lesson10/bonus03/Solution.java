@@ -26,7 +26,50 @@ text2>text1</tag>
 text1, text2 могут быть пустыми
 */
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Solution {
     public static void main(String[] args) {
+        try
+        {
+            //Считайте с консоли имя файла, который имеет HTML-формат
+            BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+
+            // Создается построитель документа
+            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            // Создается дерево DOM документа из файла
+            Document document = documentBuilder.parse(consoleReader.readLine());
+
+            // Получаем корневой элемент
+            Node root = document.getDocumentElement();
+            // Просматриваем все подэлементы корневого
+            NodeList tags = root.getChildNodes();
+            for (int i = 0; i < tags.getLength(); i++){
+                Node tag = tags.item(i);
+
+            }
+        }
+        catch (SAXException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ParserConfigurationException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }

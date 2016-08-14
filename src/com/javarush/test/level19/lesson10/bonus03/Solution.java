@@ -27,6 +27,7 @@ text1, text2 могут быть пустыми
 */
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -56,7 +57,7 @@ public class Solution {
             NodeList tags = root.getChildNodes();
             for (int i = 0; i < tags.getLength(); i++){
                 Node tag = tags.item(i);
-
+                System.out.println(printTag(tag));
             }
         }
         catch (SAXException e)
@@ -71,5 +72,10 @@ public class Solution {
         {
             e.printStackTrace();
         }
+    }
+
+    public static String printTag(Node node){
+        String tag = "";
+        return tag = "<" + node.getNodeName() + ">" + node.getNodeValue() + "</" + node.getNodeName() + ">";
     }
 }

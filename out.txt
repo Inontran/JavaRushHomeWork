@@ -1,3 +1,3 @@
-com.javarush.test.level20.lesson02.task02.Solution$JavaRush@63947c6b yes
-a b 1471355010716 true Russia
-a2 b2 1471355010719 true Ukraine
+#properties
+#Wed Aug 17 13:25:00 YAKT 2016
+key=value

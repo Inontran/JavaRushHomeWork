@@ -21,7 +21,7 @@ public class Solution {
     public static void main(String[]args)
     {
         long start = System.currentTimeMillis();
-        int[] array = getNumbers(10000);//2147483647
+        int[] array = getNumbers(2147483647);//2147483647
         long end = System.currentTimeMillis() - start; // считаю сколько секунд длилась "программа"
         long memory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory(); // считаю сколько памяти было занято.
         System.out.println("Time = " + end);
@@ -53,7 +53,7 @@ public class Solution {
         for (int i = 0; i < N; i++){
             if (checkNumber(i)){
                 powFromI = pow(i);
-                if (powFromI > N) break;
+//                if (powFromI > N*10) break;
                 numberArmstrong = pow(powFromI);
                 if (powFromI == numberArmstrong && !list.contains(numberArmstrong)) {
                     list.add(numberArmstrong);

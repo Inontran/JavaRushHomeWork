@@ -25,7 +25,7 @@ public class Solution {
 //        System.out.println(crossword.length);
 
         long start = System.currentTimeMillis();
-        List<Word> list = detectAllWords(crossword, "hom", "same", "vor");
+        List<Word> list = detectAllWords(crossword, "same", "ero", "nsd", "home", "vor", "du", "nlo", "npe");// 3 2 12 10 9 8 6 4
         long end = System.currentTimeMillis() - start; // считаю сколько секунд длилась "программа"
         long memory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory(); // считаю сколько памяти было занято.
         System.out.println("Time = " + end);
@@ -56,7 +56,7 @@ same - (1, 1) - (4, 1)
                 for (int j = 0; j < crossword[i].length; j++){
                     y = 0;
                     if (charsWord[y] == (char)crossword[i][j]){
-
+                        objectWord.setStartPoint(j, i);
                         try
                         {   //направление на 3 часа
                             if (charsWord[++y] == (char) crossword[i][j + y])
@@ -66,23 +66,21 @@ same - (1, 1) - (4, 1)
                                     if (charsWord[y] != crossword[i][j + y]) break;
                                     if (y == charsWord.length - 1)
                                     {
-                                        objectWord.setStartPoint(j, i);
                                         objectWord.setEndPoint(j + y, i);
                                         list.add(objectWord);
                                         break searchWord;//здесь должен быть выход из циклов до самого первого
                                     }
                                 }
                             }
-                            y = 0;
                         } catch (ArrayIndexOutOfBoundsException e){}
                         try
-                        {   //направление на 1-2 часа
+                        {   //направление на 2 часа
+                            y = 0;
                             if (charsWord[++y] == (char)crossword[i - y][j + y]){
                                 for ( ; y < charsWord.length; y++){
                                     if (charsWord[y] != crossword[i - y][j + y]) break;
                                     if (y == charsWord.length - 1)
                                     {
-                                        objectWord.setStartPoint(j, i);
                                         objectWord.setEndPoint(j + y, i - y);
                                         list.add(objectWord);
                                         break searchWord;//здесь должен быть выход из циклов до самого первого
@@ -93,52 +91,93 @@ same - (1, 1) - (4, 1)
                         }catch (ArrayIndexOutOfBoundsException e){}
                         try
                         {   //направление на 12 часов
+                             y = 0;
                             if (charsWord[++y] == (char)crossword[i - y][j]){
                                 for ( ; y < charsWord.length; y++){
                                     if (charsWord[y] != crossword[i - y][j]) break;
                                     if (y == charsWord.length - 1)
                                     {
-                                        objectWord.setStartPoint(j + 1, i);
                                         objectWord.setEndPoint(j + 1, i - y);
                                         list.add(objectWord);
                                         break searchWord;//здесь должен быть выход из циклов до самого первого
                                     }
                                 }
                             }
-                            y = 0;
                         }catch (ArrayIndexOutOfBoundsException e){}
                         try
-                        {   //направление на 10-11 часов
+                        {   //направление на 10 часов
+                            y = 0;
                             if (charsWord[++y] == (char)crossword[i - y][j - y]){
                                 for ( ; y < charsWord.length; y++){
                                     if (charsWord[y] != crossword[i - y][j - y]) break;
                                     if (y == charsWord.length - 1)
                                     {
-                                        objectWord.setStartPoint(j, i);
                                         objectWord.setEndPoint(j - y, i - y);
                                         list.add(objectWord);
                                         break searchWord;//здесь должен быть выход из циклов до самого первого
                                     }
                                 }
                             }
-                            y = 0;
                         }catch (ArrayIndexOutOfBoundsException e){}
                         try
                         {   //направление на 9 часов
-                            System.out.println(y);
-                            if (charsWord[++y] == (char)crossword[i][j + y]){
+                            y = 0;
+                            if (charsWord[++y] == (char)crossword[i][j - y]){
                                 for ( ; y < charsWord.length; y++){
                                     if (charsWord[y] != crossword[i][j - y]) break;
                                     if (y == charsWord.length - 1)
                                     {
-                                        objectWord.setStartPoint(j, i);
-                                        objectWord.setEndPoint(j, i - y);
+                                        objectWord.setEndPoint(j - y, i);
                                         list.add(objectWord);
                                         break searchWord;//здесь должен быть выход из циклов до самого первого
                                     }
                                 }
                             }
+                        }catch (ArrayIndexOutOfBoundsException e){}
+                        try
+                        {   //направление на 8 часов
                             y = 0;
+                            if (charsWord[++y] == (char)crossword[i + y][j - y]){
+                                for ( ; y < charsWord.length; y++){
+                                    if (charsWord[y] != crossword[i + y][j - y]) break;
+                                    if (y == charsWord.length - 1)
+                                    {
+                                        objectWord.setEndPoint(j - y, i + y);
+                                        list.add(objectWord);
+                                        break searchWord;//здесь должен быть выход из циклов до самого первого
+                                    }
+                                }
+                            }
+                        }catch (ArrayIndexOutOfBoundsException e){}
+                        try
+                        {   //направление на 6 часов
+                            y = 0;
+                            if (charsWord[++y] == (char)crossword[i + y][j]){
+                                for ( ; y < charsWord.length; y++){
+                                    if (charsWord[y] != crossword[i + y][j]) break;
+                                    if (y == charsWord.length - 1)
+                                    {
+                                        objectWord.setEndPoint(j, i + y);
+                                        list.add(objectWord);
+                                        break searchWord;//здесь должен быть выход из циклов до самого первого
+                                    }
+                                }
+                            }
+                        }catch (ArrayIndexOutOfBoundsException e){}
+                        try
+                        {   //направление на 4 часов
+                            y = 0;
+                            if (charsWord[++y] == (char)crossword[i + y][j + y]){
+                                for ( ; y < charsWord.length; y++){
+                                    if (charsWord[y] != crossword[i + y][j + y]) break;
+                                    if (y == charsWord.length - 1)
+                                    {
+                                        objectWord.setEndPoint(j + y, i + y);
+                                        list.add(objectWord);
+                                        break searchWord;//здесь должен быть выход из циклов до самого первого
+                                    }
+                                }
+                            }
                         }catch (ArrayIndexOutOfBoundsException e){}
                     }
                 }

@@ -1,9 +1,7 @@
 package com.javarush.test.level20.lesson10.bonus04;
 
 import java.io.Serializable;
-import java.util.AbstractList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /* Свой список
 Посмотреть, как реализован LinkedList.
@@ -59,80 +57,114 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         for (int i = 1; i < 16; i++) {
             list.add(String.valueOf(i));
         }
+
+//        for (int i = 1; i < list.size(); i++){
+//            System.out.println(list.get(i));
+//        }
         System.out.println("Expected 3, actual is " + ((Solution) list).getParent("8"));
-        list.remove("5");
-        System.out.println("Expected null, actual is " + ((Solution) list).getParent("11"));
+//        list.remove("5");
+//        System.out.println("Expected null, actual is " + ((Solution) list).getParent("11"));
+
     }
+
+    transient int size = 0;
+    transient Node<String> root;
+    transient Node<String> lastLeft;
+    transient Node<String> lastRight;
+
+
+    public Solution(){}
 
     public String getParent(String value) {
         //have to be implemented
+        Node<String> x = root;
+        while (x != null) {
+            int cmp = value.compareTo(x.key);
+            if (cmp == 0) {
+                return x.parent.key;
+            }
+            if (cmp < 0) {
+                x = x.right;
+            } else {
+                x = x.left;
+            }
+        }
         return null;
     }
 
     @Override
     public String get(int index)
     {
+        Node<String> x = root;
+        while (x != null) {
+            int cmp = String.valueOf(index).compareTo(x.key);
+            if (cmp == 0) {
+                return x.key;
+            }
+            if (cmp < 0) {
+                x = x.right;
+            } else {
+                x = x.left;
+            }
+        }
         return null;
     }
 
     @Override
     public int size()
     {
-        return 0;
+        return size;
     }
 
+    public boolean add(String k) {
+        Node<String> x = root, y = null;
+        while (x != null) {
+            int cmp = k.compareTo(x.key);
+            if (cmp == 0) {
+                //если нашли такой же элемент, то возвращаем false
+                return false;
+            } else {
+                y = x;
+                if (cmp < 0) {
+                    x = x.right;
+                } else {
+                    x = x.left;
+                }
+            }
+        }
+
+        Node<String> newNode = new Node<>(k);
+        if (y == null) {
+            root = newNode;
+        } else {
+            if (k.compareTo(y.key) < 0) {
+                y.right = newNode;
+            } else {
+                y.left = newNode;
+            }
+        }
+
+        size++;
+        return true;
+    }
+
+    public void printTree(){
+        Node<String> temp = root;
+        while (temp != null){
+            System.out.println(temp.key + "->");
+            temp = temp.right;
+        }
+    }
+
+
     private class Node<String>{
-        private String item;
+        private String key;
         private Node<String> parent;
-        private Node<String> childLeft;
-        private Node<String> childRight;
+        private Node<String> left;
+        private Node<String> right;
 
-        Node(String item, Node<String> parent, Node<String> childLeft, Node<String> childRight) {
-            this.item = item;
-            this.parent = parent;
-            this.childLeft = childLeft;
-            this.childRight = childRight;
-        }
-
-        //getters and setters
-        public String getItem()
-        {
-            return item;
-        }
-
-        public void setItem(String item)
-        {
-            this.item = item;
-        }
-
-        public Node<String> getParent()
-        {
-            return parent;
-        }
-
-        public void setParent(Node<String> parent)
-        {
-            this.parent = parent;
-        }
-
-        public Node<String> getChildLeft()
-        {
-            return childLeft;
-        }
-
-        public void setChildLeft(Node<String> childLeft)
-        {
-            this.childLeft = childLeft;
-        }
-
-        public Node<String> getChildRight()
-        {
-            return childRight;
-        }
-
-        public void setChildRight(Node<String> childRight)
-        {
-            this.childRight = childRight;
+        Node(String key) {
+            this.key = key;
         }
     }
 }

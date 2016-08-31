@@ -1,7 +1,8 @@
 package com.javarush.test.level20.lesson10.bonus04;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.AbstractList;
+import java.util.List;
 
 /* Свой список
 Посмотреть, как реализован LinkedList.
@@ -51,21 +52,20 @@ import java.util.*;
 Должно быть наследование AbstractList<String>, List<String>, Cloneable, Serializable
 Метод main в тестировании не участвует
 */
-public class Solution extends AbstractList<String> implements List<String>, Cloneable, Serializable{
+public class Solution extends AbstractList<String> implements List<String>, Cloneable, Serializable
+{
     public static void main(String[] args) {
         List<String> list = new Solution();
-        for (int i = 1; i < 16; i++) {
-            list.add(String.valueOf(i));
-        }
-
-//        for (int i = 1; i < list.size(); i++){
-//            System.out.println(list.get(i));
+//        for (int i = 1; i < 16; i++) {
+//            list.add(String.valueOf(i));
 //        }
-        System.out.println("Expected 3, actual is " + ((Solution) list).getParent("8"));
+        list.add("");
+        System.out.println("Expected 3, actual is " + ((Solution) list).getParent("2"));
 //        list.remove("5");
 //        System.out.println("Expected null, actual is " + ((Solution) list).getParent("11"));
-
     }
+
+
 
     transient int size = 0;
     transient Node<String> root;
@@ -79,14 +79,21 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         //have to be implemented
         Node<String> x = root;
         while (x != null) {
-            int cmp = value.compareTo(x.key);
-            if (cmp == 0) {
-                return x.parent.key;
-            }
-            if (cmp < 0) {
-                x = x.right;
-            } else {
-                x = x.left;
+            if (value.equals(x.key)) return x.parent.key;
+            else {
+                Node<String> lastNode = x.right;
+                while (x.right != null){
+                    if (value.equals(x.right.key)) return x.right.parent.key;
+                    else {
+                        lastNode = x.right;
+                        x.right = x.right.right;
+                    }
+                }
+                x = lastNode.parent.left;
+                while (x == null){
+                    x = lastNode.parent.parent.left;
+                    lastNode = lastNode.parent;
+                }
             }
         }
         return null;
@@ -117,34 +124,52 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     }
 
     public boolean add(String k) {
-        Node<String> x = root, y = null;
-        while (x != null) {
-            int cmp = k.compareTo(x.key);
-            if (cmp == 0) {
-                //если нашли такой же элемент, то возвращаем false
-                return false;
-            } else {
-                y = x;
-                if (cmp < 0) {
-                    x = x.right;
-                } else {
-                    x = x.left;
-                }
-            }
-        }
+//        Node<String> x = root, y = null;
+//        while (x != null) {
+//            int cmp = k.compareTo(x.key);
+//            if (cmp == 0) {
+//                //если нашли такой же элемент, то возвращаем false
+//                return false;
+//            } else {
+//                y = x;
+//                if (cmp < 0) {
+//                    x = x.right;
+//                } else {
+//                    x = x.left;
+//                }
+//            }
+//        }
+//
+//        Node<String> newNode = new Node<>(k);
+//        if (y == null) {
+//            root = newNode;
+//        } else {
+//            if (k.compareTo(y.key) < 0) {
+//                y.right = newNode;
+//            } else {
+//                y.left = newNode;
+//            }
+//        }
+//
+//        size++;
 
-        Node<String> newNode = new Node<>(k);
-        if (y == null) {
-            root = newNode;
-        } else {
-            if (k.compareTo(y.key) < 0) {
-                y.right = newNode;
-            } else {
-                y.left = newNode;
-            }
-        }
+        Node<String> node = new Node<>("0");
+        root = node;
+        root.right = new Node<>("1");
+        root.right.parent = root;
+        root.left = new Node<>("2");
+        root.left.parent = root;
 
-        size++;
+        root.right.right = new Node<>("3");
+        root.right.right.parent = root.right;
+        root.right.left = new Node<>("4");
+        root.right.left.parent = root.right;
+
+        root.left.right = new Node<>("5");
+        root.left.right.parent = root.left;
+        root.left.left = new Node<>("6");
+        root.left.left.parent = root.left;
+
         return true;
     }
 

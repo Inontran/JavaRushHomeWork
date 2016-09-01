@@ -60,7 +60,13 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //            list.add(String.valueOf(i));
 //        }
         list.add("");
-        System.out.println("Expected 3, actual is " + ((Solution) list).getParent("2"));
+        for (int i = 0; i <= 6; i++) try
+        {
+            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
+//            e.printStackTrace();
+        }
 //        list.remove("5");
 //        System.out.println("Expected null, actual is " + ((Solution) list).getParent("11"));
     }
@@ -78,22 +84,49 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     public String getParent(String value) {
         //have to be implemented
         Node<String> x = root;
-        while (x != null) {
+        while (x != null)
+        {
             if (value.equals(x.key)) return x.parent.key;
-            else {
-                Node<String> lastNode = x.right;
-                while (x.right != null){
-                    if (value.equals(x.right.key)) return x.right.parent.key;
-                    else {
-                        lastNode = x.right;
-                        x.right = x.right.right;
+            else
+            {
+                if (x.right != null)
+                {
+                    x = x.right;
+                    continue;
+                } else
+                {
+                    if (x.left != null)
+                    {
+                        x = x.parent.left;
+                        continue;
+                    } else
+                    {
+                        while (x.parent.left == null)
+                        {
+                            x = x.parent;
+                        }
+                        if (x.parent.left.equals(x)){
+                            while (x.parent.parent.left == null){
+                                x = x.parent.parent.left;
+                            }
+                        }else x = x.parent.left;
                     }
                 }
-                x = lastNode.parent.left;
-                while (x == null){
-                    x = lastNode.parent.parent.left;
-                    lastNode = lastNode.parent;
-                }
+
+//                Node<String> lastNode = x.right;
+//                while (x.right != null){
+//                    if (value.equals(x.right.key)) return x.right.parent.key;
+//                    else {
+//                        lastNode = x.right;
+//                        x.right = x.right.right;
+//                    }
+//                }
+//                x = lastNode.parent.left;
+//                while (x == null){
+//                    x = lastNode.parent.parent.left;
+//                    lastNode = lastNode.parent;
+//                }
+//            }
             }
         }
         return null;

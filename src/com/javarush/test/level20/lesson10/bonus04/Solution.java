@@ -3,6 +3,8 @@ package com.javarush.test.level20.lesson10.bonus04;
 import java.io.Serializable;
 import java.util.AbstractList;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 /* Свой список
 Посмотреть, как реализован LinkedList.
@@ -60,13 +62,19 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //            list.add(String.valueOf(i));
 //        }
         list.add("");
-        for (int i = 0; i <= 6; i++) try
-        {
-            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
-        } catch (NullPointerException e){
-            System.out.println(i + ", parent is null");
-//            e.printStackTrace();
+//        for (int i = 0; i <= 6; i++) try
+//        {
+//            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
+//        } catch (NullPointerException e){
+//            System.out.println(i + ", parent is null");
+//        }
+
+        ListIterator<String> listIter = list.listIterator();
+        while (listIter.hasNext()){
+            System.out.println(listIter.next());
         }
+
+
 //        list.remove("5");
 //        System.out.println("Expected null, actual is " + ((Solution) list).getParent("11"));
     }
@@ -75,8 +83,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 
     transient int size = 0;
     transient Node<String> root;
-    transient Node<String> lastLeft;
-    transient Node<String> lastRight;
+    transient Node<String> last;
 
 
     public Solution(){}
@@ -179,6 +186,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         root.left.left = new Node<>("6");
         root.left.left.parent = root.left;
 
+        size = 7;
         return true;
     }
 
@@ -187,6 +195,93 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         while (temp != null){
             System.out.println(temp.key + "->");
             temp = temp.right;
+        }
+    }
+
+    @Override
+    public ListIterator<String> listIterator()
+    {
+        return new ListIter();
+    }
+
+    private class ListIter implements ListIterator<String>{
+        private Node<String> lastReturned;
+        private Node<String> next;
+        private int countReturnedNodes;
+
+        ListIter(){
+            countReturnedNodes = 0;
+            next = root;
+        }
+
+        @Override
+        public boolean hasNext()
+        {
+            return countReturnedNodes < size;
+        }
+
+        @Override
+        public String next()
+        {
+            if (!hasNext()) throw new NoSuchElementException();
+
+            lastReturned = next;
+            if ( ! next.parent.left.equals(next) ){
+                next = next.parent.left;
+            } else {
+                while (next.parent.left.equals(next)){
+                    next = next.parent;
+                }
+                next = next.left;
+                while (next.right != null){
+                    next = next.right;
+                }
+            }
+
+            countReturnedNodes++;
+            return lastReturned.key;
+        }
+
+        @Override
+        public boolean hasPrevious()
+        {
+            return false;
+        }
+
+        @Override
+        public String previous()
+        {
+            return null;
+        }
+
+        @Override
+        public int nextIndex()
+        {
+            return countReturnedNodes;
+        }
+
+        @Override
+        public int previousIndex()
+        {
+            return 0;
+        }
+
+        @Override
+        public void remove()
+        {
+
+        }
+
+        @Override
+        public void set(String s)
+        {
+
+        }
+
+        @Override
+        public void add(String s)
+        {
+
         }
     }
 

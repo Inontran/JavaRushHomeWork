@@ -90,43 +90,31 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             else
             {
                 if (x.right != null)
-                {
+                {//проверяем правого потока
                     x = x.right;
                     continue;
                 } else
                 {
                     if (x.left != null)
-                    {
-                        x = x.parent.left;
+                    {//если правый потомок не подходит, то проверяем левого потомка
+                        x = x.left;
                         continue;
                     } else
-                    {
+                    {//если потомки не подходят, проверяем левого брата это узла, поднимаясь вверх по этой ветке
                         while (x.parent.left == null)
                         {
                             x = x.parent;
                         }
-                        if (x.parent.left.equals(x)){
+                        if (x.parent.left.equals(x))
+                        {//если мы уже перешли на левую ветку до этого, то мы проверяем дядей этого узла,
+                            // поднимаясь вверх по ветке
                             while (x.parent.parent.left == null){
                                 x = x.parent.parent.left;
                             }
+                            x = x.parent.parent.left;
                         }else x = x.parent.left;
                     }
                 }
-
-//                Node<String> lastNode = x.right;
-//                while (x.right != null){
-//                    if (value.equals(x.right.key)) return x.right.parent.key;
-//                    else {
-//                        lastNode = x.right;
-//                        x.right = x.right.right;
-//                    }
-//                }
-//                x = lastNode.parent.left;
-//                while (x == null){
-//                    x = lastNode.parent.parent.left;
-//                    lastNode = lastNode.parent;
-//                }
-//            }
             }
         }
         return null;
@@ -135,19 +123,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     @Override
     public String get(int index)
     {
-        Node<String> x = root;
-        while (x != null) {
-            int cmp = String.valueOf(index).compareTo(x.key);
-            if (cmp == 0) {
-                return x.key;
-            }
-            if (cmp < 0) {
-                x = x.right;
-            } else {
-                x = x.left;
-            }
-        }
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override

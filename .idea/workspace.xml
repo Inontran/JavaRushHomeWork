@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,8 +87,8 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="236" column="38" selection-start-line="236" selection-start-column="38" selection-end-line="236" selection-end-column="38" />
+            <state relative-caret-position="356">
+              <caret line="245" column="46" selection-start-line="245" selection-start-column="46" selection-end-line="245" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getParent#0;class#Solution#0" expanded="false" />
@@ -96,7 +97,7 @@
                 <element signature="method#remove#0;class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
-                <marker date="1472786664749" expanded="false" signature="7783:7992" ph="{...}" />
+                <marker date="1472787298445" expanded="false" signature="7975:8184" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -908,7 +909,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472786821377</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="level20.lesson10. save">
+      <created>1472786933137</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1472786933137</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1370,8 +1378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="236" column="38" selection-start-line="236" selection-start-column="38" selection-end-line="236" selection-end-column="38" />
+        <state relative-caret-position="356">
+          <caret line="245" column="46" selection-start-line="245" selection-start-column="46" selection-end-line="245" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getParent#0;class#Solution#0" expanded="false" />
@@ -1380,7 +1388,7 @@
             <element signature="method#remove#0;class#ListIter#0;class#Solution#0" expanded="false" />
             <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
-            <marker date="1472786664749" expanded="false" signature="7783:7992" ph="{...}" />
+            <marker date="1472787298445" expanded="false" signature="7975:8184" ph="{...}" />
           </folding>
         </state>
       </provider>

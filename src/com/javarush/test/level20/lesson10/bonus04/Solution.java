@@ -226,18 +226,24 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             if (!hasNext()) throw new NoSuchElementException();
 
             lastReturned = next;
-            if ( ! next.parent.left.equals(next) ){
-                next = next.parent.left;
-            } else {
-                while (next.parent.left.equals(next)){
-                    next = next.parent;
+            try
+            {
+                if (!next.parent.left.equals(next))
+                {
+                    next = next.parent.left;
+                } else
+                {
+                    while (next.parent.left.equals(next))
+                    {
+                        next = next.parent;
+                    }
+                    next = next.left;
+                    while (next.right != null)
+                    {
+                        next = next.right;
+                    }
                 }
-                next = next.left;
-                while (next.right != null){
-                    next = next.right;
-                }
-            }
-
+            } catch (NullPointerException e){}
             countReturnedNodes++;
             return lastReturned.key;
         }

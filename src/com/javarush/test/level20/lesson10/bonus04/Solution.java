@@ -59,17 +59,17 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //            list.add(String.valueOf(i));
 //        }
         list.add("");
-//        for (int i = 0; i <= 6; i++) try
-//        {
-//            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
-//        } catch (NullPointerException e){
-//            System.out.println(i + ", parent is null");
-//        }
-
-        ListIterator<String> listIter = list.listIterator();
-        while (listIter.hasNext()){
-            System.out.println(listIter.next());
+        for (int i = 0; i <= 6; i++) try
+        {
+            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
         }
+
+//        ListIterator<String> listIter = list.listIterator();
+//        while (listIter.hasNext()){
+//            System.out.println(listIter.next());
+//        }
 
 
 //        list.remove("5");
@@ -224,8 +224,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 
     public String getParent(String value) {
         //have to be implemented
-
-        return null;
+        return minHeap.get(minHeap.indexOf(value)).parent.key;
     }
 
     @Override
@@ -278,7 +277,10 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     @Override
     public int indexOf(Object o)
     {
-        throw new UnsupportedOperationException();
+        for(int i = 0; i < minHeap.size(); i++){
+            if (minHeap.get(i).key.equals(o)) return i;
+        }
+        throw new NoSuchElementException("No such element : " + o);
     }
 
     @Override

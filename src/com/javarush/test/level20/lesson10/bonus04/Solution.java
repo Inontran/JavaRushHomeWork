@@ -249,18 +249,43 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     @Override
     public boolean add(String s)
     {
-        for (int i = 0; i < 8; i++) minHeap.add(new Node<>(String.valueOf(i)));
-
-        for (int i = 0; i < minHeap.size(); i++)
+//        for (int i = 0; i < 8; i++) minHeap.add(new Node<>(String.valueOf(i)));
+//
+//        for (int i = 0; i < minHeap.size(); i++)
+//        {
+//            if ( 2 * i + 2 == minHeap.size()) break;
+//            minHeap.get(i).right = minHeap.get(2*i + 2);
+//            minHeap.get(2*i + 2).parent = minHeap.get(i);
+//            minHeap.get(i).left = minHeap.get(2*i + 1);
+//            minHeap.get(2*i + 1).parent = minHeap.get(i);
+//        }
+        Node<String> currentNode;
+        for (int i = minHeap.size()-1; i >= 0; i--)
         {
-            if ( 2 * i + 2 == minHeap.size()) break;
-            minHeap.get(i).right = minHeap.get(2*i + 2);
-            minHeap.get(2*i + 2).parent = minHeap.get(i);
-            minHeap.get(i).left = minHeap.get(2*i + 1);
-            minHeap.get(2*i + 1).parent = minHeap.get(i);
-        }
+            currentNode = minHeap.get(i);
+            if (currentNode.right != null || currentNode.left != null)
+            {
+                currentNode = minHeap.get(i+1);
+                if (currentNode.right == null && currentNode.left == null)
+                {
+                    Node<String> newNode = new Node<>(s);
+                    currentNode.right = newNode;
+                    newNode.parent = currentNode;
+                    minHeap.add(newNode);
+                    return true;
+                }
+                else if (currentNode.right != null && currentNode.left == null)
+                {
+                    Node<String> newNode = new Node<>(s);
+                    currentNode.left = newNode;
+                    newNode.parent = currentNode;
+                    minHeap.add(newNode);
+                    return true;
+                }
+            }
 
-        return true;
+        }
+        return false;
     }
 
     @Override
@@ -377,7 +402,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             if (!hasNext()) throw new NoSuchElementException();
 
             lastReturned = next;
-            next = minHeap.get(countReturnedNodes).right;
+            next = minHeap.get(countReturnedNodes);
             countReturnedNodes++;
             return lastReturned.key;
         }

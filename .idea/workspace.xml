@@ -87,17 +87,17 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+            <state relative-caret-position="393">
+              <caret line="279" column="36" selection-start-line="279" selection-start-column="36" selection-end-line="279" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#test#0;class#Solution#0" expanded="false" />
-                <element signature="method#getParent#0;class#Solution#0" expanded="false" />
-                <element signature="e#10306#10307#0" expanded="true" />
-                <element signature="e#10363#10364#0" expanded="true" />
                 <element signature="method#remove#1;class#Solution#0" expanded="false" />
                 <element signature="class#ListIter#0;class#Solution#0" expanded="false" />
-                <element signature="method#ListIter#0;class#ListIter#0;class#Solution#0" expanded="false" />
+                <element signature="e#14680#14681#0" expanded="true" />
+                <element signature="e#14745#14746#0" expanded="true" />
+                <element signature="e#14807#14808#0" expanded="true" />
+                <element signature="e#14872#14873#0" expanded="true" />
                 <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="class#Node#0;class#Solution#0" expanded="false" />
@@ -109,7 +109,7 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="7004">
               <caret line="893" column="24" selection-start-line="893" selection-start-column="24" selection-end-line="893" selection-end-column="24" />
               <folding>
                 <element signature="docComment;class#LinkedList#0" expanded="false" />
@@ -260,9 +260,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,6 +390,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -940,7 +940,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473084816667</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="level20.lesson10. save">
+      <created>1473176282161</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1473176282161</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1374,18 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="893" column="24" selection-start-line="893" selection-start-column="24" selection-end-line="893" selection-end-column="24" />
-          <folding>
-            <element signature="docComment;class#LinkedList#0" expanded="false" />
-            <element signature="class#Node#0;class#LinkedList#0" expanded="false" />
-            <element signature="class#LLSpliterator#0;class#LinkedList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1402,19 +1397,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7004">
+          <caret line="893" column="24" selection-start-line="893" selection-start-column="24" selection-end-line="893" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;class#LinkedList#0" expanded="false" />
+            <element signature="class#Node#0;class#LinkedList#0" expanded="false" />
+            <element signature="class#LLSpliterator#0;class#LinkedList#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        <state relative-caret-position="393">
+          <caret line="279" column="36" selection-start-line="279" selection-start-column="36" selection-end-line="279" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#test#0;class#Solution#0" expanded="false" />
-            <element signature="method#getParent#0;class#Solution#0" expanded="false" />
-            <element signature="e#10306#10307#0" expanded="true" />
-            <element signature="e#10363#10364#0" expanded="true" />
             <element signature="method#remove#1;class#Solution#0" expanded="false" />
             <element signature="class#ListIter#0;class#Solution#0" expanded="false" />
-            <element signature="method#ListIter#0;class#ListIter#0;class#Solution#0" expanded="false" />
+            <element signature="e#14680#14681#0" expanded="true" />
+            <element signature="e#14745#14746#0" expanded="true" />
+            <element signature="e#14807#14808#0" expanded="true" />
+            <element signature="e#14872#14873#0" expanded="true" />
             <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
             <element signature="class#Node#0;class#Solution#0" expanded="false" />

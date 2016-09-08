@@ -1,6 +1,6 @@
 package com.javarush.test.level20.lesson10.bonus04;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 
 /* Свой список
@@ -53,25 +53,24 @@ import java.util.*;
 */
 public class Solution extends AbstractList<String> implements List<String>, Cloneable, Serializable
 {
-    public static void main(String[] args) {
-        List<String> list = new Solution();
-        for (int i = 1; i < 2; i++) {
-            list.add(String.valueOf(i));
-        }
-//        list.add("");
-        for (int i = 0; i <= 1; i++) try
-        {
-            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
-        } catch (NullPointerException e){
-            System.out.println(i + ", parent is null");
-        }
+    public static void main(String[] args) throws Exception
+    {
+//        List<String> list = new Solution();
+//        for (int i = 1; i < 16; i++) {
+//            list.add(String.valueOf(i));
+//        }
 
-        System.out.println(list.size());
+//        for (int i = 0; i < 16; i++) try
+//        {
+//            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
+//        } catch (NullPointerException e){
+//            System.out.println(i + ", parent is null");
+//        }
 //
-        ListIterator<String> listIter = list.listIterator();
-        while (listIter.hasNext()){
-            System.out.println(listIter.next());
-        }
+//        ListIterator<String> listIter = list.listIterator();
+//        while (listIter.hasNext()){
+//            System.out.println(listIter.next());
+//        }
 
 //        try
 //        {
@@ -80,94 +79,95 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        } catch (Exception e){
 //            e.printStackTrace();
 //        }
+        test();
     }
 
-    public static void test(){
-//        List<String> listTree = new Solution();
-//        System.out.println("Check isEmpty: " + listTree.isEmpty() + " Size: " + listTree.size());
-//
-//        for (int i = 1; i < 16; i++) {
-//            listTree.add(String.valueOf(i));
-//        }
-//        System.out.println(listTree);
-//
-//        System.out.println("Check isEmpty: " + listTree.isEmpty() + " Size: " + listTree.size());
-//        List<String> list2222 = new Solution();
-//        System.out.println("Check isEmpty: " + list2222.isEmpty() + " Size: " + list2222.size());
-//        list2222.add("test");
-//        System.out.println("Check isEmpty: " + list2222.isEmpty() + " Size: " + list2222.size());
-//        List<String> list1111 = new Solution();
-//        System.out.println("Check isEmpty: " + list1111.isEmpty() + " Size: " + list1111.size());
-//
-//        System.out.println("\nExpected 3, actual is " + ((Solution) listTree).getParent("8"));
-//        listTree.remove("5");
-//        System.out.println("Expected null, actual is " + ((Solution) listTree).getParent("11"));
-//        listTree.clear();
-//        for (int i = 1; i < 16; i++) {
-//            listTree.add(String.valueOf(i));
-//        }
-//
-//        //For additional check correct work clone method
-//        Solution list = ((Solution)listTree).clone();
-//
-//        System.out.println("Start value with using clone: " + listTree);
-//        System.out.println("\n===== REMOVE Remove 2 and 9 =====");
-//        list.remove("2");
-//        list.remove("9");
-//        for (String s : list) System.out.print(s+ " ");
-//        System.out.println("\n===== ADD 16, 17, 18, 19, 20 =====");
-//        list.add("16");
-//        list.add("17");
-//        list.add("18");
-//        list.add("19");
-//        list.add("20");
-//        for (String s : list) System.out.print(s+ " ");
-//        System.out.println("\n===== REMOVE 18 and 20 =====");
-//        list.remove("18");
-//        list.remove("20");
-//        for (String s : list) System.out.print(s+ " ");
-//        System.out.println("\n===== ADD 21 and 22 =====");
-//        list.add("21");
-//        list.add("22");
-//        list.add("23");
-//        list.add("24");
-//        list.add("25");
-//        list.add("26");
-//        list.add("27");
-//        list.add("28");
-//        list.add("29");
-//        list.add("30");
-//        list.add("31");
-//        list.add("32");
-//        //list.add(null);
-//        for (String s : list) System.out.print(s+ " ");
-//        System.out.println("\n---------------------------------------");
-//        System.out.println("3 Expected 1, actual is " + ((Solution) list).getParent("3"));
-//        System.out.println("4 Expected 1, actual is " + ((Solution) list).getParent("4"));
-//        System.out.println("8 Expected 3, actual is " + ((Solution) list).getParent("8"));
-//        System.out.println("11 Expected null, actual is " + ((Solution) list).getParent(null));
-//        System.out.println("15 Expected 7, actual is " + ((Solution) list).getParent("15"));
-//        System.out.println("16 Expected 7, actual is " + ((Solution) list).getParent("16"));
-//        System.out.println("10 Expected 4, actual is " + ((Solution) list).getParent("10"));
-//        System.out.println("17 Expected 8, actual is " + ((Solution) list).getParent("17"));
-//        System.out.println("19 Expected 10, actual is " + ((Solution) list).getParent("19"));
-//        System.out.println("21 Expected 10, actual is " + ((Solution) list).getParent("21"));
-//        System.out.println("22 Expected 15, actual is " + ((Solution) list).getParent("22"));
-//        System.out.println("--->> By task and add more item:");
-//        System.out.println("23 Expected 15, actual is " + ((Solution) list).getParent("23"));
-//        System.out.println("24 Expected 16, actual is " + ((Solution) list).getParent("24"));
-//        System.out.println("25 Expected 16, actual is " + ((Solution) list).getParent("25"));
-//        System.out.println("26 Expected 17, actual is " + ((Solution) list).getParent("26"));
-//        System.out.println("27 Expected 17, actual is " + ((Solution) list).getParent("27"));
-//        System.out.println("28 Expected 19, actual is " + ((Solution) list).getParent("28"));
-//        System.out.println("29 Expected 19, actual is " + ((Solution) list).getParent("29"));
-//        System.out.println("30 Expected 21, actual is " + ((Solution) list).getParent("30"));
-//        System.out.println("31 Expected 21, actual is " + ((Solution) list).getParent("31"));
-//        System.out.println("32 Expected 22, actual is " + ((Solution) list).getParent("32"));
-//        System.out.println("---------------------------------------");
-//        System.out.println("Size array = " + list.size() + " expected = 22");
-//        System.out.println();
-//
+    public static void test() throws Exception{
+        List<String> listTree = new Solution();
+        System.out.println("Check isEmpty: " + listTree.isEmpty() + " Size: " + listTree.size());
+
+        for (int i = 1; i < 16; i++) {
+            listTree.add(String.valueOf(i));
+        }
+        System.out.println(listTree);
+
+        System.out.println("Check isEmpty: " + listTree.isEmpty() + " Size: " + listTree.size());
+        List<String> list2222 = new Solution();
+        System.out.println("Check isEmpty: " + list2222.isEmpty() + " Size: " + list2222.size());
+        list2222.add("test");
+        System.out.println("Check isEmpty: " + list2222.isEmpty() + " Size: " + list2222.size());
+        List<String> list1111 = new Solution();
+        System.out.println("Check isEmpty: " + list1111.isEmpty() + " Size: " + list1111.size());
+
+        System.out.println("\nExpected 3, actual is " + ((Solution) listTree).getParent("8"));
+        listTree.remove("5");
+        System.out.println("Expected null, actual is " + ((Solution) listTree).getParent("11"));
+        listTree.clear();
+        for (int i = 1; i < 16; i++) {
+            listTree.add(String.valueOf(i));
+        }
+
+        //For additional check correct work clone method
+        Solution list = (Solution) listTree.clone();
+
+        System.out.println("Start value with using clone: " + listTree);
+        System.out.println("\n===== REMOVE Remove 2 and 9 =====");
+        list.remove("2");
+        list.remove("9");
+        for (String s : list) System.out.print(s+ " ");
+        System.out.println("\n===== ADD 16, 17, 18, 19, 20 =====");
+        list.add("16");
+        list.add("17");
+        list.add("18");
+        list.add("19");
+        list.add("20");
+        for (String s : list) System.out.print(s+ " ");
+        System.out.println("\n===== REMOVE 18 and 20 =====");
+        list.remove("18");
+        list.remove("20");
+        for (String s : list) System.out.print(s+ " ");
+        System.out.println("\n===== ADD 21 and 22 =====");
+        list.add("21");
+        list.add("22");
+        list.add("23");
+        list.add("24");
+        list.add("25");
+        list.add("26");
+        list.add("27");
+        list.add("28");
+        list.add("29");
+        list.add("30");
+        list.add("31");
+        list.add("32");
+        //list.add(null);
+        for (String s : list) System.out.print(s+ " ");
+        System.out.println("\n---------------------------------------");
+        System.out.println("3 Expected 1, actual is " + ((Solution) list).getParent("3"));
+        System.out.println("4 Expected 1, actual is " + ((Solution) list).getParent("4"));
+        System.out.println("8 Expected 3, actual is " + ((Solution) list).getParent("8"));
+        System.out.println("11 Expected null, actual is " + ((Solution) list).getParent(null));
+        System.out.println("15 Expected 7, actual is " + ((Solution) list).getParent("15"));
+        System.out.println("16 Expected 7, actual is " + ((Solution) list).getParent("16"));
+        System.out.println("10 Expected 4, actual is " + ((Solution) list).getParent("10"));
+        System.out.println("17 Expected 8, actual is " + ((Solution) list).getParent("17"));
+        System.out.println("19 Expected 10, actual is " + ((Solution) list).getParent("19"));
+        System.out.println("21 Expected 10, actual is " + ((Solution) list).getParent("21"));
+        System.out.println("22 Expected 15, actual is " + ((Solution) list).getParent("22"));
+        System.out.println("--->> By task and add more item:");
+        System.out.println("23 Expected 15, actual is " + ((Solution) list).getParent("23"));
+        System.out.println("24 Expected 16, actual is " + ((Solution) list).getParent("24"));
+        System.out.println("25 Expected 16, actual is " + ((Solution) list).getParent("25"));
+        System.out.println("26 Expected 17, actual is " + ((Solution) list).getParent("26"));
+        System.out.println("27 Expected 17, actual is " + ((Solution) list).getParent("27"));
+        System.out.println("28 Expected 19, actual is " + ((Solution) list).getParent("28"));
+        System.out.println("29 Expected 19, actual is " + ((Solution) list).getParent("29"));
+        System.out.println("30 Expected 21, actual is " + ((Solution) list).getParent("30"));
+        System.out.println("31 Expected 21, actual is " + ((Solution) list).getParent("31"));
+        System.out.println("32 Expected 22, actual is " + ((Solution) list).getParent("32"));
+        System.out.println("---------------------------------------");
+        System.out.println("Size array = " + list.size() + " expected = 22");
+        System.out.println();
+
 //        System.out.println("=============== Clone test ==================");
 //
 //        System.out.println("Object: " + list + " --> Size = " + list.size());
@@ -180,25 +180,25 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        Solution add = new Solution();
 //        add.addAll(sol);
 //        System.out.println(add + " --> Size: " + add.size() + " = " + sol.size());
-//
-//        System.out.println("=============== Iterator test ===============");
-//        Iterator<String> itr = list.iterator();
-//        while (itr.hasNext()) {
-//            String a = itr.next();
-//            System.out.print(a + " ");
-//        }
-//        System.out.println("\nExpected size 22 = " + list.size());
-//
-//        System.out.println("\nIter remove");
-//        Iterator<String> itr2 = list.iterator();
-//        while (itr2.hasNext()) {
-//            if (itr2.next().contains("31")) {
-//                itr2.remove();
-//            }
-//        }
-//        System.out.println("For test " + list + " --> Size = " + list.size());
-//        System.out.println("Collect size " + list.size() + " Expected 21");
-//
+
+        System.out.println("=============== Iterator test ===============");
+        Iterator<String> itr = list.iterator();
+        while (itr.hasNext()) {
+            String a = itr.next();
+            System.out.print(a + " ");
+        }
+        System.out.println("\nExpected size 22 = " + list.size());
+
+        System.out.println("\nIter remove");
+        Iterator<String> itr2 = list.iterator();
+        while (itr2.hasNext()) {
+            if (itr2.next().contains("31")) {
+                itr2.remove();
+            }
+        }
+        System.out.println("For test " + list + " --> Size = " + list.size());
+        System.out.println("Collect size " + list.size() + " Expected 21");
+
 //        System.out.println("\n===== SERIALIZATION and DESERIALIZATION =====");
 //        System.out.println("Collect before serializable " + list);
 //        System.out.print("Save list");
@@ -221,12 +221,19 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        System.out.println("Before: " + listTree);
 //        listTree.clear();
 //        System.out.println("After clear: " + listTree + (listTree.isEmpty() ? " OK" : " Badly"));
-//
+
     }
 
     transient ArrayList<Node<String>> minHeap = new ArrayList<>();
 
-    public Solution(){}
+    public Solution(){
+        minHeap.add(new Node<>("0"));
+    }
+
+    private Solution(ArrayList<Node<String>> list)
+    {
+        minHeap = list;
+    }
 
     public String getParent(String value) {
         //have to be implemented
@@ -239,7 +246,8 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     @Override
     public String get(int index)
     {
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+        return minHeap.get(index).key;
     }
 
     @Override
@@ -263,11 +271,6 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        }
 
         Node<String> newNode = new Node<>(s);
-        if (minHeap.size() == 0)
-        {
-            minHeap.add(newNode);
-            return true;
-        }
         if (minHeap.size() == 1)
         {
             minHeap.get(0).right = newNode;
@@ -276,38 +279,38 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             return true;
         }
 
-//        Node<String> currentNode;
-//        for (int i = minHeap.size()-1; i >= 0; i--)
-//        {
-//            currentNode = minHeap.get(i);
-//            if (currentNode.right != null || currentNode.left != null)
-//            {
-//                if (currentNode.right == null && currentNode.left == null)
-//                {
-//                    currentNode.right = newNode;
-//                    newNode.parent = currentNode;
-//                    minHeap.add(newNode);
-//                    return true;
-//                }
-//                else if (currentNode.right != null && currentNode.left == null)
-//                {
-//                    currentNode.left = newNode;
-//                    newNode.parent = currentNode;
-//                    minHeap.add(newNode);
-//                    return true;
-//                }
-//                else
-//                {
-//                    currentNode = minHeap.get(i+1);
-//                    currentNode.right = newNode;
-//                    newNode.parent = currentNode;
-//                    minHeap.add(newNode);
-//                    return true;
-//                }
-//
-//            }
-//
-//        }
+        Node<String> currentNode;
+        for (int i = minHeap.size()-1; i >= 0; i--)
+        {
+            currentNode = minHeap.get(i);
+            if (currentNode.right != null || currentNode.left != null)
+            {
+                if (currentNode.right == null && currentNode.left == null)
+                {
+                    currentNode.right = newNode;
+                    newNode.parent = currentNode;
+                    minHeap.add(newNode);
+                    return true;
+                }
+                else if (currentNode.right != null && currentNode.left == null)
+                {
+                    currentNode.left = newNode;
+                    newNode.parent = currentNode;
+                    minHeap.add(newNode);
+                    return true;
+                }
+                else
+                {
+                    currentNode = minHeap.get(i+1);
+                    currentNode.right = newNode;
+                    newNode.parent = currentNode;
+                    minHeap.add(newNode);
+                    return true;
+                }
+
+            }
+
+        }
         return false;
     }
 
@@ -386,8 +389,9 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException
+    public Object clone() throws CloneNotSupportedException
     {
+//        return new Solution(minHeap);
         return super.clone();
     }
 
@@ -409,8 +413,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         private int countReturnedNodes;
 
         ListIter(){
-            countReturnedNodes = 1;
-            next = minHeap.get(0);
+            countReturnedNodes = 0;
         }
 
         @Override
@@ -423,9 +426,8 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         public String next()
         {
             if (!hasNext()) throw new NoSuchElementException();
-
-            lastReturned = next;
             next = minHeap.get(countReturnedNodes++);
+            lastReturned = next;
             return lastReturned.key;
         }
 

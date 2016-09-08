@@ -55,29 +55,31 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 {
     public static void main(String[] args) {
         List<String> list = new Solution();
-//        for (int i = 1; i < 16; i++) {
-//            list.add(String.valueOf(i));
-//        }
-        list.add("");
-//        for (int i = 0; i <= 6; i++) try
-//        {
-//            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
-//        } catch (NullPointerException e){
-//            System.out.println(i + ", parent is null");
-//        }
-
-//        ListIterator<String> listIter = list.listIterator();
-//        while (listIter.hasNext()){
-//            System.out.println(listIter.next());
-//        }
-
-        try
-        {
-            list.remove("2");
-            System.out.println("Expected null, actual is " + ((Solution) list).getParent("5"));
-        } catch (Exception e){
-            e.printStackTrace();
+        for (int i = 1; i < 2; i++) {
+            list.add(String.valueOf(i));
         }
+//        list.add("");
+        for (int i = 0; i <= 1; i++) try
+        {
+            System.out.println(i + ", parent is " + ((Solution) list).getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
+        }
+
+        System.out.println(list.size());
+//
+        ListIterator<String> listIter = list.listIterator();
+        while (listIter.hasNext()){
+            System.out.println(listIter.next());
+        }
+
+//        try
+//        {
+//            list.remove("2");
+//            System.out.println("Expected null, actual is " + ((Solution) list).getParent("5"));
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
     }
 
     public static void test(){
@@ -259,32 +261,53 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //            minHeap.get(i).left = minHeap.get(2*i + 1);
 //            minHeap.get(2*i + 1).parent = minHeap.get(i);
 //        }
-        Node<String> currentNode;
-        for (int i = minHeap.size()-1; i >= 0; i--)
-        {
-            currentNode = minHeap.get(i);
-            if (currentNode.right != null || currentNode.left != null)
-            {
-                currentNode = minHeap.get(i+1);
-                if (currentNode.right == null && currentNode.left == null)
-                {
-                    Node<String> newNode = new Node<>(s);
-                    currentNode.right = newNode;
-                    newNode.parent = currentNode;
-                    minHeap.add(newNode);
-                    return true;
-                }
-                else if (currentNode.right != null && currentNode.left == null)
-                {
-                    Node<String> newNode = new Node<>(s);
-                    currentNode.left = newNode;
-                    newNode.parent = currentNode;
-                    minHeap.add(newNode);
-                    return true;
-                }
-            }
 
+        Node<String> newNode = new Node<>(s);
+        if (minHeap.size() == 0)
+        {
+            minHeap.add(newNode);
+            return true;
         }
+        if (minHeap.size() == 1)
+        {
+            minHeap.get(0).right = newNode;
+            newNode.parent = minHeap.get(0);
+            minHeap.add(newNode);
+            return true;
+        }
+
+//        Node<String> currentNode;
+//        for (int i = minHeap.size()-1; i >= 0; i--)
+//        {
+//            currentNode = minHeap.get(i);
+//            if (currentNode.right != null || currentNode.left != null)
+//            {
+//                if (currentNode.right == null && currentNode.left == null)
+//                {
+//                    currentNode.right = newNode;
+//                    newNode.parent = currentNode;
+//                    minHeap.add(newNode);
+//                    return true;
+//                }
+//                else if (currentNode.right != null && currentNode.left == null)
+//                {
+//                    currentNode.left = newNode;
+//                    newNode.parent = currentNode;
+//                    minHeap.add(newNode);
+//                    return true;
+//                }
+//                else
+//                {
+//                    currentNode = minHeap.get(i+1);
+//                    currentNode.right = newNode;
+//                    newNode.parent = currentNode;
+//                    minHeap.add(newNode);
+//                    return true;
+//                }
+//
+//            }
+//
+//        }
         return false;
     }
 
@@ -402,8 +425,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             if (!hasNext()) throw new NoSuchElementException();
 
             lastReturned = next;
-            next = minHeap.get(countReturnedNodes);
-            countReturnedNodes++;
+            next = minHeap.get(countReturnedNodes++);
             return lastReturned.key;
         }
 

@@ -9,9 +9,23 @@ import java.util.function.Consumer;
  */
 public class MinHeap extends AbstractList<String> implements List<String>, Cloneable, Serializable
 {
+    public static void main(String[] args)
+    {
+        MinHeap minHeap = new MinHeap();
+        for (int i = 1; i <= 10; i++) minHeap.add(String.valueOf(i));
+
+        ListIterator<String> iterator = minHeap.listIterator();
+        while (iterator.hasNext()) System.out.print(iterator.next() + "->");
+        System.out.println();
+        while (iterator.hasPrevious()) System.out.print(iterator.previous() + "<-");
+    }
+
+
+
+
     transient int size = 0;
-    transient Node<TreeNode> first;
-    transient Node<TreeNode> last;
+    transient Node<String> first;
+    transient Node<String> last;
 
 
     public MinHeap()
@@ -22,7 +36,49 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     @Override
     public boolean add(String s)
     {
-        linkLast(new TreeNode(s));
+        linkLast(s);//добавление элемента в список
+        //далее идет установка связей древовидной структуры
+        //если был добавлен только второй элемент, то его связи устанавливаем по отделному алгоритму, а иначе...
+        if (size == 2){
+            first.rightLeaf = last;
+            last.parentTree = first;
+        }
+        //устанавливаем связи ...
+        else
+        {
+            ListItr iterator = listIterator(size-1);
+            Node<String> currentNode;
+            while (iterator.hasPrevious()){
+                iterator.previous();
+                currentNode = iterator.lastReturned;
+                if (currentNode.rightLeaf != null || currentNode.leftLeaf != null)
+                {
+                    if (currentNode.rightLeaf == null && currentNode.leftLeaf == null)
+                    {
+                        currentNode.rightLeaf = last;
+                        last.parentTree = currentNode;
+                        break;
+                    }
+                    else if (currentNode.rightLeaf != null && currentNode.leftLeaf == null)
+                    {
+                        currentNode.leftLeaf = last;
+                        last.parentTree = currentNode;
+                        break;
+                    }
+                    else
+                    {
+                        if (iterator.hasNext())
+                        {
+                            iterator.next();
+                            currentNode = iterator.lastReturned;
+                            currentNode.rightLeaf = last;
+                            last.parentTree = currentNode;
+                        }
+                    }
+                }
+            }
+        }
+
         return true;
     }
 
@@ -47,14 +103,14 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     //TODO реализовать удаление не одного элемента, а всей ветки
     public boolean remove(Object o) {
         if (o == null) {
-            for (Node<TreeNode> x = first; x != null; x = x.next) {
+            for (Node<String> x = first; x != null; x = x.next) {
                 if (x.item == null) {
                     unlink(x);
                     return true;
                 }
             }
         } else {
-            for (Node<TreeNode> x = first; x != null; x = x.next) {
+            for (Node<String> x = first; x != null; x = x.next) {
                 if (o.equals(x.item)) {
                     unlink(x);
                     return true;
@@ -69,13 +125,13 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     {
         int index = 0;
         if (o == null) {
-            for (Node<TreeNode> x = first; x != null; x = x.next) {
+            for (Node<String> x = first; x != null; x = x.next) {
                 if (x.item == null)
                     return index;
                 index++;
             }
         } else {
-            for (Node<TreeNode> x = first; x != null; x = x.next) {
+            for (Node<String> x = first; x != null; x = x.next) {
                 if (o.equals(x.item))
                     return index;
                 index++;
@@ -89,13 +145,13 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     {
         int index = size;
         if (o == null) {
-            for (Node<TreeNode> x = last; x != null; x = x.prev) {
+            for (Node<String> x = last; x != null; x = x.prev) {
                 index--;
                 if (x.item == null)
                     return index;
             }
         } else {
-            for (Node<TreeNode> x = last; x != null; x = x.prev) {
+            for (Node<String> x = last; x != null; x = x.prev) {
                 index--;
                 if (o.equals(x.item))
                     return index;
@@ -111,8 +167,8 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         // - helps a generational GC if the discarded nodes inhabit
         //   more than one generation
         // - is sure to free memory even if there is a reachable Iterator
-        for (Node<TreeNode> x = first; x != null; ) {
-            Node<TreeNode> next = x.next;
+        for (Node<String> x = first; x != null; ) {
+            Node<String> next = x.next;
             x.item = null;
             x.next = null;
             x.prev = null;
@@ -142,13 +198,13 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     }
 
     @Override
-    public ListIterator<String> listIterator()
+    public ListItr listIterator()
     {
-        return super.listIterator();
+        return listIterator(0);
     }
 
     @Override
-    public ListIterator<TreeNode> listIterator(int index)
+    public ListItr listIterator(int index)
     {
         return new ListItr(index);
     }
@@ -165,7 +221,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         throw new UnsupportedOperationException();
     }
 //TODO реализовать клонирование
-    private LinkedList<TreeNode> superClone() {
+    private LinkedList<String> superClone() {
 //        try {
 //            return (MinHeap) super.clone();
 //        } catch (CloneNotSupportedException e) {
@@ -197,27 +253,27 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         throw new UnsupportedOperationException();
     }
 
-    Node<TreeNode> node(int index) {
+    Node<String> node(int index) {
         // assert isElementIndex(index);
 
         if (index < (size >> 1)) {
-            Node<TreeNode> x = first;
+            Node<String> x = first;
             for (int i = 0; i < index; i++)
                 x = x.next;
             return x;
         } else {
-            Node<TreeNode> x = last;
+            Node<String> x = last;
             for (int i = size - 1; i > index; i--)
                 x = x.prev;
             return x;
         }
     }
 
-    TreeNode unlink(Node<TreeNode> x) {
+    String unlink(Node<String> x) {
         // assert x != null;
-        final TreeNode element = x.item;
-        final Node<TreeNode> next = x.next;
-        final Node<TreeNode> prev = x.prev;
+        final String element = x.item;
+        final Node<String> next = x.next;
+        final Node<String> prev = x.prev;
 
         if (prev == null) {
             first = next;
@@ -239,10 +295,10 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         return element;
     }
 
-    private TreeNode unlinkLast(Node<TreeNode> l) {
+    private String unlinkLast(Node<String> l) {
         // assert l == last && l != null;
-        final TreeNode element = l.item;
-        final Node<TreeNode> prev = l.prev;
+        final String element = l.item;
+        final Node<String> prev = l.prev;
         l.item = null;
         l.prev = null; // help GC
         last = prev;
@@ -255,10 +311,10 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         return element;
     }
 
-    private TreeNode unlinkFirst(Node<TreeNode> f) {
+    private String unlinkFirst(Node<String> f) {
         // assert f == first && f != null;
-        final TreeNode element = f.item;
-        final Node<TreeNode> next = f.next;
+        final String element = f.item;
+        final Node<String> next = f.next;
         f.item = null;
         f.next = null; // help GC
         first = next;
@@ -271,10 +327,10 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         return element;
     }
 
-    void linkBefore(TreeNode e, Node<TreeNode> succ) {
+    void linkBefore(String e, Node<String> succ) {
         // assert succ != null;
-        final Node<TreeNode> pred = succ.prev;
-        final Node<TreeNode> newNode = new Node<>(pred, e, succ);
+        final Node<String> pred = succ.prev;
+        final Node<String> newNode = new Node<>(pred, e, succ);
         succ.prev = newNode;
         if (pred == null)
             first = newNode;
@@ -284,9 +340,9 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         modCount++;
     }
 
-    void linkLast(TreeNode e) {
-        final Node<TreeNode> l = last;
-        final Node<TreeNode> newNode = new Node<>(l, e, null);
+    void linkLast(String e) {
+        final Node<String> l = last;
+        final Node<String> newNode = new Node<>(l, e, null);
         last = newNode;
         if (l == null)
             first = newNode;
@@ -296,9 +352,9 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         modCount++;
     }
 
-    private void linkFirst(TreeNode e) {
-        final Node<TreeNode> f = first;
-        final Node<TreeNode> newNode = new Node<>(null, e, f);
+    private void linkFirst(String e) {
+        final Node<String> f = first;
+        final Node<String> newNode = new Node<>(null, e, f);
         first = newNode;
         if (f == null)
             last = newNode;
@@ -317,7 +373,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         s.writeInt(size);
 
         // Write out all elements in the proper order.
-        for (Node<TreeNode> x = first; x != null; x = x.next)
+        for (Node<String> x = first; x != null; x = x.next)
             s.writeObject(x.item);
     }
 
@@ -331,7 +387,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
 
         // Read in all elements in the proper order.
         for (int i = 0; i < size; i++)
-            linkLast((TreeNode) s.readObject());
+            linkLast((String) s.readObject());
     }
 
     public boolean contains(Object o) {
@@ -340,9 +396,9 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
 
 
 
-    private class ListItr implements ListIterator<TreeNode> {
-        private Node<TreeNode> lastReturned;
-        private Node<TreeNode> next;
+    private class ListItr implements ListIterator<String> {
+        private Node<String> lastReturned;
+        private Node<String> next;
         private int nextIndex;
         private int expectedModCount = modCount;
 
@@ -356,7 +412,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             return nextIndex < size;
         }
 
-        public TreeNode next() {
+        public String next() {
             checkForComodification();
             if (!hasNext())
                 throw new NoSuchElementException();
@@ -371,7 +427,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             return nextIndex > 0;
         }
 
-        public TreeNode previous() {
+        public String previous() {
             checkForComodification();
             if (!hasPrevious())
                 throw new NoSuchElementException();
@@ -394,7 +450,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             if (lastReturned == null)
                 throw new IllegalStateException();
 
-            Node<TreeNode> lastNext = lastReturned.next;
+            Node<String> lastNext = lastReturned.next;
             unlink(lastReturned);
             if (next == lastReturned)
                 next = lastNext;
@@ -404,14 +460,14 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             expectedModCount++;
         }
 
-        public void set(TreeNode e) {
+        public void set(String e) {
             if (lastReturned == null)
                 throw new IllegalStateException();
             checkForComodification();
             lastReturned.item = e;
         }
 
-        public void add(TreeNode e) {
+        public void add(String e) {
             checkForComodification();
             lastReturned = null;
             if (next == null)
@@ -422,7 +478,7 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             expectedModCount++;
         }
 
-        public void forEachRemaining(Consumer<? super TreeNode> action) {
+        public void forEachRemaining(Consumer<? super String> action) {
             Objects.requireNonNull(action);
             while (modCount == expectedModCount && nextIndex < size) {
                 action.accept(next.item);
@@ -439,26 +495,18 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         }
     }
 
-    private static class Node<TreeNode> {
-        TreeNode item;
-        Node<TreeNode> next;
-        Node<TreeNode> prev;
+    private static class Node<String> {
+        String item;
+        Node<String> next;
+        Node<String> prev;
+        Node<String> parentTree;
+        Node<String> rightLeaf;
+        Node<String> leftLeaf;
 
-        Node(Node<TreeNode> prev, TreeNode element, Node<TreeNode> next) {
+        Node(Node<String> prev, String element, Node<String> next) {
             this.item = element;
             this.next = next;
             this.prev = prev;
-        }
-    }
-
-    private class TreeNode<String>{
-        private String key;
-        private TreeNode<String> parent;
-        private TreeNode<String> left;
-        private TreeNode<String> right;
-
-        TreeNode(String key) {
-            this.key = key;
         }
     }
 }

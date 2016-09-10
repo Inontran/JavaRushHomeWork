@@ -12,12 +12,17 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
     public static void main(String[] args)
     {
         MinHeap minHeap = new MinHeap();
-        for (int i = 1; i <= 10; i++) minHeap.add(String.valueOf(i));
+        for (int i = 0; i <= 16; i++) minHeap.add(String.valueOf(i));
 
-        ListIterator<String> iterator = minHeap.listIterator();
-        while (iterator.hasNext()) System.out.print(iterator.next() + "->");
-        System.out.println();
-        while (iterator.hasPrevious()) System.out.print(iterator.previous() + "<-");
+        ListIterator<String> iterator = minHeap.listIterator(minHeap.size());
+
+
+        for (int i = 0; i <= 16; i++) try
+        {
+            System.out.println(i + ", parent is " + minHeap.getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
+        }
     }
 
 
@@ -30,6 +35,19 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
 
     public MinHeap()
     {
+    }
+
+    public String getParent(String value)
+    {
+        ListItr iterator = listIterator();
+        Node<String> currentNode;
+        while (iterator.hasNext())
+        {
+            iterator.next();
+            currentNode = iterator.lastReturned;
+            if (currentNode.item.equals(value)) return currentNode.parentTree.item;
+        }
+        return null;
     }
 
     //TODO реализвать древовидную структуру (добавление элемента согласно условию задания)
@@ -46,20 +64,14 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         //устанавливаем связи ...
         else
         {
-            ListItr iterator = listIterator(size-1);
+            ListItr iterator = listIterator(size);
             Node<String> currentNode;
             while (iterator.hasPrevious()){
                 iterator.previous();
                 currentNode = iterator.lastReturned;
                 if (currentNode.rightLeaf != null || currentNode.leftLeaf != null)
                 {
-                    if (currentNode.rightLeaf == null && currentNode.leftLeaf == null)
-                    {
-                        currentNode.rightLeaf = last;
-                        last.parentTree = currentNode;
-                        break;
-                    }
-                    else if (currentNode.rightLeaf != null && currentNode.leftLeaf == null)
+                    if (currentNode.rightLeaf != null && currentNode.leftLeaf == null)
                     {
                         currentNode.leftLeaf = last;
                         last.parentTree = currentNode;
@@ -67,13 +79,11 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
                     }
                     else
                     {
-                        if (iterator.hasNext())
-                        {
-                            iterator.next();
-                            currentNode = iterator.lastReturned;
-                            currentNode.rightLeaf = last;
-                            last.parentTree = currentNode;
-                        }
+                        iterator.next();
+                        iterator.next();
+                        iterator.lastReturned.rightLeaf = last;
+                        last.parentTree = iterator.lastReturned;
+                        break;
                     }
                 }
             }

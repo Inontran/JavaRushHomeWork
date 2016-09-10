@@ -4,7 +4,6 @@
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/MinHeap.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/MinHeap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +75,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus01/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="527">
               <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -85,15 +84,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1556">
-              <caret line="291" column="41" selection-start-line="291" selection-start-column="41" selection-end-line="291" selection-end-column="41" />
+            <state relative-caret-position="153">
+              <caret line="335" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2651#2700#0" expanded="false" />
-                <element signature="method#remove#1;class#Solution#0" expanded="false" />
                 <element signature="class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
@@ -103,21 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/MinHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+            <state relative-caret-position="1387">
+              <caret line="292" column="9" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#remove#1;class#MinHeap#0" expanded="false" />
                 <element signature="method#indexOf#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#lastIndexOf#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#clear#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#superClone#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#clone#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#node#0;class#MinHeap#0" expanded="false" />
-                <element signature="method#unlink#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#unlinkLast#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#unlinkFirst#0;class#MinHeap#0" expanded="false" />
                 <element signature="method#linkBefore#0;class#MinHeap#0" expanded="false" />
@@ -133,10 +129,57 @@
       <file leaf-file-name="AbstractList.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4590">
+            <state relative-caret-position="4896">
               <caret line="323" column="24" selection-start-line="323" selection-start-column="24" selection-end-line="323" selection-end-column="24" />
               <folding>
+                <element signature="e#0#26981#0" expanded="false" />
+                <element signature="e#4449#4450#0" expanded="false" />
+                <element signature="e#4506#4507#0" expanded="false" />
+                <element signature="e#4990#4991#0" expanded="false" />
+                <element signature="e#5047#5048#0" expanded="false" />
+                <element signature="e#5343#5344#0" expanded="false" />
+                <element signature="e#5400#5401#0" expanded="false" />
+                <element signature="e#7627#7628#0" expanded="false" />
+                <element signature="e#7665#7666#0" expanded="false" />
+                <element signature="e#9661#9662#0" expanded="false" />
+                <element signature="e#9693#9694#0" expanded="false" />
+                <element signature="e#9883#9884#0" expanded="false" />
+                <element signature="e#9921#9922#0" expanded="false" />
                 <element signature="class#Itr#0;class#AbstractList#0" expanded="false" />
+                <element signature="e#11802#11803#0" expanded="false" />
+                <element signature="e#11849#11850#0" expanded="false" />
+                <element signature="e#13024#13025#0" expanded="false" />
+                <element signature="e#13062#13063#0" expanded="false" />
+                <element signature="e#13102#13103#0" expanded="false" />
+                <element signature="e#13144#13145#0" expanded="false" />
+                <element signature="e#13579#13580#0" expanded="false" />
+                <element signature="e#13616#13617#0" expanded="false" />
+                <element signature="e#13654#13655#0" expanded="false" />
+                <element signature="e#13693#13694#0" expanded="false" />
+                <element signature="e#22195#22196#0" expanded="false" />
+                <element signature="e#22251#22252#0" expanded="false" />
+                <element signature="e#24063#24064#0" expanded="false" />
+                <element signature="e#24101#24102#0" expanded="false" />
+                <element signature="e#24472#24473#0" expanded="false" />
+                <element signature="e#24509#24510#0" expanded="false" />
+                <element signature="e#24792#24793#0" expanded="false" />
+                <element signature="e#24849#24850#0" expanded="false" />
+                <element signature="e#25083#25084#0" expanded="false" />
+                <element signature="e#25142#25143#0" expanded="false" />
+                <element signature="e#25382#25383#0" expanded="false" />
+                <element signature="e#25443#25444#0" expanded="false" />
+                <element signature="e#25485#25486#0" expanded="false" />
+                <element signature="e#25550#25551#0" expanded="false" />
+                <element signature="e#25740#25741#0" expanded="false" />
+                <element signature="e#25780#25781#0" expanded="false" />
+                <element signature="e#26007#26008#0" expanded="false" />
+                <element signature="e#26069#26070#0" expanded="false" />
+                <element signature="e#26442#26443#0" expanded="false" />
+                <element signature="e#26496#26497#0" expanded="false" />
+                <element signature="e#26798#26799#0" expanded="false" />
+                <element signature="e#26845#26846#0" expanded="false" />
+                <element signature="e#26903#26904#0" expanded="false" />
+                <element signature="e#26977#26978#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -364,7 +407,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -495,8 +540,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1072,7 +1115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473345804504</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="level20.lesson10. save">
+      <created>1473432959074</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1473432959074</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1102,7 +1152,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14641288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1123,6 +1172,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1493,7 +1543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="527">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1593,34 +1643,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/AbstractList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4590">
+        <state relative-caret-position="4896">
           <caret line="323" column="24" selection-start-line="323" selection-start-column="24" selection-end-line="323" selection-end-column="24" />
           <folding>
+            <element signature="e#0#26981#0" expanded="false" />
+            <element signature="e#4449#4450#0" expanded="false" />
+            <element signature="e#4506#4507#0" expanded="false" />
+            <element signature="e#4990#4991#0" expanded="false" />
+            <element signature="e#5047#5048#0" expanded="false" />
+            <element signature="e#5343#5344#0" expanded="false" />
+            <element signature="e#5400#5401#0" expanded="false" />
+            <element signature="e#7627#7628#0" expanded="false" />
+            <element signature="e#7665#7666#0" expanded="false" />
+            <element signature="e#9661#9662#0" expanded="false" />
+            <element signature="e#9693#9694#0" expanded="false" />
+            <element signature="e#9883#9884#0" expanded="false" />
+            <element signature="e#9921#9922#0" expanded="false" />
             <element signature="class#Itr#0;class#AbstractList#0" expanded="false" />
+            <element signature="e#11802#11803#0" expanded="false" />
+            <element signature="e#11849#11850#0" expanded="false" />
+            <element signature="e#13024#13025#0" expanded="false" />
+            <element signature="e#13062#13063#0" expanded="false" />
+            <element signature="e#13102#13103#0" expanded="false" />
+            <element signature="e#13144#13145#0" expanded="false" />
+            <element signature="e#13579#13580#0" expanded="false" />
+            <element signature="e#13616#13617#0" expanded="false" />
+            <element signature="e#13654#13655#0" expanded="false" />
+            <element signature="e#13693#13694#0" expanded="false" />
+            <element signature="e#22195#22196#0" expanded="false" />
+            <element signature="e#22251#22252#0" expanded="false" />
+            <element signature="e#24063#24064#0" expanded="false" />
+            <element signature="e#24101#24102#0" expanded="false" />
+            <element signature="e#24472#24473#0" expanded="false" />
+            <element signature="e#24509#24510#0" expanded="false" />
+            <element signature="e#24792#24793#0" expanded="false" />
+            <element signature="e#24849#24850#0" expanded="false" />
+            <element signature="e#25083#25084#0" expanded="false" />
+            <element signature="e#25142#25143#0" expanded="false" />
+            <element signature="e#25382#25383#0" expanded="false" />
+            <element signature="e#25443#25444#0" expanded="false" />
+            <element signature="e#25485#25486#0" expanded="false" />
+            <element signature="e#25550#25551#0" expanded="false" />
+            <element signature="e#25740#25741#0" expanded="false" />
+            <element signature="e#25780#25781#0" expanded="false" />
+            <element signature="e#26007#26008#0" expanded="false" />
+            <element signature="e#26069#26070#0" expanded="false" />
+            <element signature="e#26442#26443#0" expanded="false" />
+            <element signature="e#26496#26497#0" expanded="false" />
+            <element signature="e#26798#26799#0" expanded="false" />
+            <element signature="e#26845#26846#0" expanded="false" />
+            <element signature="e#26903#26904#0" expanded="false" />
+            <element signature="e#26977#26978#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="335" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2651#2700#0" expanded="false" />
+            <element signature="class#ListIter#0;class#Solution#0" expanded="false" />
+            <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
+            <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
+            <element signature="class#Node#0;class#Solution#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/MinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+        <state relative-caret-position="1387">
+          <caret line="292" column="9" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#remove#1;class#MinHeap#0" expanded="false" />
             <element signature="method#indexOf#0;class#MinHeap#0" expanded="false" />
             <element signature="method#lastIndexOf#0;class#MinHeap#0" expanded="false" />
             <element signature="method#clear#0;class#MinHeap#0" expanded="false" />
             <element signature="method#superClone#0;class#MinHeap#0" expanded="false" />
             <element signature="method#clone#0;class#MinHeap#0" expanded="false" />
             <element signature="method#node#0;class#MinHeap#0" expanded="false" />
-            <element signature="method#unlink#0;class#MinHeap#0" expanded="false" />
             <element signature="method#unlinkLast#0;class#MinHeap#0" expanded="false" />
             <element signature="method#unlinkFirst#0;class#MinHeap#0" expanded="false" />
             <element signature="method#linkBefore#0;class#MinHeap#0" expanded="false" />
@@ -1628,22 +1737,6 @@
             <element signature="method#linkFirst#0;class#MinHeap#0" expanded="false" />
             <element signature="method#writeObject#0;class#MinHeap#0" expanded="false" />
             <element signature="method#readObject#0;class#MinHeap#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1556">
-          <caret line="291" column="41" selection-start-line="291" selection-start-column="41" selection-end-line="291" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2651#2700#0" expanded="false" />
-            <element signature="method#remove#1;class#Solution#0" expanded="false" />
-            <element signature="class#ListIter#0;class#Solution#0" expanded="false" />
-            <element signature="method#set#0;class#ListIter#0;class#Solution#0" expanded="false" />
-            <element signature="method#add#0;class#ListIter#0;class#Solution#0" expanded="false" />
-            <element signature="class#Node#0;class#Solution#0" expanded="false" />
           </folding>
         </state>
       </provider>

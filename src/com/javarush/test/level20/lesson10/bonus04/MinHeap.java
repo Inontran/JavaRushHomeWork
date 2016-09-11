@@ -14,7 +14,13 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         MinHeap minHeap = new MinHeap();
         for (int i = 0; i <= 16; i++) minHeap.add(String.valueOf(i));
 
-        ListIterator<String> iterator = minHeap.listIterator(minHeap.size());
+        try
+        {
+            minHeap.remove("2");
+            System.out.println("Expected null, actual is " + minHeap.getParent("5"));
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
 
         for (int i = 0; i <= 16; i++) try
@@ -22,6 +28,15 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
             System.out.println(i + ", parent is " + minHeap.getParent(String.valueOf(i)));
         } catch (NullPointerException e){
             System.out.println(i + ", parent is null");
+        }
+
+
+
+        System.out.println("================");
+        ListIterator<String> iterator = minHeap.listIterator();
+        while (iterator.hasNext())
+        {
+            System.out.print(iterator.next() + "->");
         }
     }
 
@@ -115,13 +130,24 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         if (o == null) {
             for (Node<String> x = first; x != null; x = x.next) {
                 if (x.item == null) {
+                    if (x.rightLeaf != null) remove(x.rightLeaf);
+                    if (x.leftLeaf != null) remove(x.leftLeaf);
                     unlink(x);
+                    if (x.parentTree.rightLeaf.equals(x)) x.parentTree.rightLeaf = null;
+                    if (x.parentTree.leftLeaf.equals(x)) x.parentTree.leftLeaf = null;
+                    x.parentTree = null;
                     return true;
                 }
             }
         } else {
             for (Node<String> x = first; x != null; x = x.next) {
                 if (o.equals(x.item)) {
+                    if (x.rightLeaf != null) remove(x.rightLeaf);
+                    if (x.leftLeaf != null) remove(x.leftLeaf);
+
+                    if (x.parentTree.rightLeaf.equals(x)) x.parentTree.rightLeaf = null;
+                    if (x.parentTree.leftLeaf.equals(x)) x.parentTree.leftLeaf = null;
+                    x.parentTree = null;
                     unlink(x);
                     return true;
                 }

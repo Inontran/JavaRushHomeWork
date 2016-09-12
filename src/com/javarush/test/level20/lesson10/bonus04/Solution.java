@@ -108,7 +108,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        }
 //
 //        //For additional check correct work clone method
-//        Solution list = (Solution) listTree.clone();
+//        Solution list = ((Solution)listTree).clone();
 //
 //        System.out.println("Start value with using clone: " + listTree);
 //        System.out.println("\n===== REMOVE Remove 2 and 9 =====");

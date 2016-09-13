@@ -1,6 +1,6 @@
 package com.javarush.test.level20.lesson10.bonus04;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -168,28 +168,28 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         System.out.println("For test " + list + " --> Size = " + list.size());
         System.out.println("Collect size " + list.size() + " Expected 21");
 
-//        System.out.println("\n===== SERIALIZATION and DESERIALIZATION =====");
-//        System.out.println("Collect before serializable " + list);
-//        System.out.print("Save list");
-//        FileOutputStream fos = new FileOutputStream("file");
-//        ObjectOutputStream oos = new ObjectOutputStream(fos);
-//        oos.writeObject(list);
-//        oos.close();
-//        fos.close();
-//        System.out.println(" Serializable done");
-//        System.out.print("Load list");
-//        FileInputStream fis = new FileInputStream("file");
-//        ObjectInputStream ois = new ObjectInputStream(fis);
-//        List<String> list2 = (List<String>) ois.readObject();
-//        ois.close();
-//        fis.close();
-//        System.out.println(" Deserializable done");
-//        System.out.println("Collect after deserializable " + list2);
-//
-//        System.out.println("\n================ Clear test =================");
-//        System.out.println("Before: " + listTree);
-//        listTree.clear();
-//        System.out.println("After clear: " + listTree + (listTree.isEmpty() ? " OK" : " Badly"));
+        System.out.println("\n===== SERIALIZATION and DESERIALIZATION =====");
+        System.out.println("Collect before serializable " + list);
+        System.out.print("Save list");
+        FileOutputStream fos = new FileOutputStream("C:/Users/sasha/IdeaProjects/JavaRushHomeWork/out.txt");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(list);
+        oos.close();
+        fos.close();
+        System.out.println(" Serializable done");
+        System.out.print("Load list");
+        FileInputStream fis = new FileInputStream("C:/Users/sasha/IdeaProjects/JavaRushHomeWork/out.txt");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        List<String> list2 = (List<String>) ois.readObject();
+        ois.close();
+        fis.close();
+        System.out.println(" Deserializable done");
+        System.out.println("Collect after deserializable " + list2);
+
+        System.out.println("\n================ Clear test =================");
+        System.out.println("Before: " + listTree);
+        listTree.clear();
+        System.out.println("After clear: " + listTree + (listTree.isEmpty() ? " OK" : " Badly"));
 
     }
 

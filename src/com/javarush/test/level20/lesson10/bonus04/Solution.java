@@ -168,18 +168,18 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        System.out.println("Size array = " + list.size() + " expected = 22");
 //        System.out.println();
 //
-////        System.out.println("=============== Clone test ==================");
-////
-////        System.out.println("Object: " + list + " --> Size = " + list.size());
-////        Solution sol = list.clone();
-////        //list.remove("7"); //Select for test
-////        System.out.println("Clone object: " + sol + " --> Size = " + sol.size());
-////        System.out.println("Result: " + list.containsAll(sol));
-////
-////        System.out.println("\nTest addAll: ");
-////        Solution add = new Solution();
-////        add.addAll(sol);
-////        System.out.println(add + " --> Size: " + add.size() + " = " + sol.size());
+//        System.out.println("=============== Clone test ==================");
+//
+//        System.out.println("Object: " + list + " --> Size = " + list.size());
+//        Solution sol = list.clone();
+//        //list.remove("7"); //Select for test
+//        System.out.println("Clone object: " + sol + " --> Size = " + sol.size());
+//        System.out.println("Result: " + list.containsAll(sol));
+//
+//        System.out.println("\nTest addAll: ");
+//        Solution add = new Solution();
+//        add.addAll(sol);
+//        System.out.println(add + " --> Size: " + add.size() + " = " + sol.size());
 //
 //        System.out.println("=============== Iterator test ===============");
 //        Iterator<String> itr = list.iterator();
@@ -199,28 +199,28 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 //        System.out.println("For test " + list + " --> Size = " + list.size());
 //        System.out.println("Collect size " + list.size() + " Expected 21");
 //
-////        System.out.println("\n===== SERIALIZATION and DESERIALIZATION =====");
-////        System.out.println("Collect before serializable " + list);
-////        System.out.print("Save list");
-////        FileOutputStream fos = new FileOutputStream("file");
-////        ObjectOutputStream oos = new ObjectOutputStream(fos);
-////        oos.writeObject(list);
-////        oos.close();
-////        fos.close();
-////        System.out.println(" Serializable done");
-////        System.out.print("Load list");
-////        FileInputStream fis = new FileInputStream("file");
-////        ObjectInputStream ois = new ObjectInputStream(fis);
-////        List<String> list2 = (List<String>) ois.readObject();
-////        ois.close();
-////        fis.close();
-////        System.out.println(" Deserializable done");
-////        System.out.println("Collect after deserializable " + list2);
-////
-////        System.out.println("\n================ Clear test =================");
-////        System.out.println("Before: " + listTree);
-////        listTree.clear();
-////        System.out.println("After clear: " + listTree + (listTree.isEmpty() ? " OK" : " Badly"));
+//        System.out.println("\n===== SERIALIZATION and DESERIALIZATION =====");
+//        System.out.println("Collect before serializable " + list);
+//        System.out.print("Save list");
+//        FileOutputStream fos = new FileOutputStream("file");
+//        ObjectOutputStream oos = new ObjectOutputStream(fos);
+//        oos.writeObject(list);
+//        oos.close();
+//        fos.close();
+//        System.out.println(" Serializable done");
+//        System.out.print("Load list");
+//        FileInputStream fis = new FileInputStream("file");
+//        ObjectInputStream ois = new ObjectInputStream(fis);
+//        List<String> list2 = (List<String>) ois.readObject();
+//        ois.close();
+//        fis.close();
+//        System.out.println(" Deserializable done");
+//        System.out.println("Collect after deserializable " + list2);
+//
+//        System.out.println("\n================ Clear test =================");
+//        System.out.println("Before: " + listTree);
+//        listTree.clear();
+//        System.out.println("After clear: " + listTree + (listTree.isEmpty() ? " OK" : " Badly"));
 //
 //    }
 

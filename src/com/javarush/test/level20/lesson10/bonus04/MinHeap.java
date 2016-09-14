@@ -11,42 +11,58 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
 {
     public static void main(String[] args)
     {
-//        MinHeap minHeap = new MinHeap();
-//        for (int i = 0; i <= 16; i++) minHeap.add(String.valueOf(i));
-//
-//        try
-//        {
-//            minHeap.remove("2");
-//            System.out.println("Expected null, actual is " + minHeap.getParent("5"));
-//        } catch (Exception e){
-//            e.printStackTrace();
-//        }
-//
-//
-//        for (int i = 0; i <= 16; i++) try
-//        {
-//            System.out.println(i + ", parent is " + minHeap.getParent(String.valueOf(i)));
-//        } catch (NullPointerException e){
-//            System.out.println(i + ", parent is null");
-//        }
-//
-//
-//
-//        System.out.println("================");
-//        ListIterator<String> iterator = minHeap.listIterator();
-//        while (iterator.hasNext())
-//        {
-//            System.out.print(iterator.next() + "->");
-//        }
-//        System.out.println("--------------------------------------------------");
+        MinHeap minHeap = new MinHeap();
+        for (int i = 1; i <= 16; i++) minHeap.add(String.valueOf(i));
+
+        for (int i = 1; i <= 16; i++) try
+        {
+            System.out.println(i + ", parent is " + minHeap.getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
+        }
+
         try
         {
-            test();
+            minHeap.remove("2");
+            System.out.println("Expected null, actual is " + minHeap.getParent("5"));
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        catch (Exception e)
+
+
+        for (int i = 1; i <= 16; i++) try
+        {
+            System.out.println(i + ", parent is " + minHeap.getParent(String.valueOf(i)));
+        } catch (NullPointerException e){
+            System.out.println(i + ", parent is null");
+        }
+
+
+//        minHeap.clear();
+        try
+        {
+            minHeap = minHeap.clone();
+        }
+        catch (CloneNotSupportedException e)
         {
             e.printStackTrace();
         }
+        System.out.println("================");
+        ListIterator<String> iterator = minHeap.listIterator();
+        while (iterator.hasNext())
+        {
+            System.out.print(iterator.next() + "->");
+        }
+        System.out.println("--------------------------------------------------");
+        System.out.println(minHeap);
+//        try
+//        {
+//            test();
+//        }
+//        catch (Exception e)
+//        {
+//            e.printStackTrace();
+//        }
     }
 
 
@@ -196,13 +212,15 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
 
 
     transient int size = 0;
+//    transient Node<String> first = new Node<>(null, "0", null);
+//    transient Node<String> last = new Node<>(null, "0", null);
     transient Node<String> first;
     transient Node<String> last;
 
     //TODO реализация дерева без корня
     public MinHeap()
     {
-        add(null);
+        add("0");
     }
 
     public String getParent(String value)
@@ -218,6 +236,8 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
                 if (currentNode.item.equals(value)) return currentNode.parentTree.item;
             }
         }catch (NullPointerException e){ return null; }
+
+
         return null;
     }
 
@@ -412,7 +432,10 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         MinHeap clone = (MinHeap) super.clone();
 
         // Put clone into "virgin" state
-        clone.first = clone.last = null;
+//        clone.first = new Node<>(null, "0", null);
+//        clone.last = new Node<>(null, "0", null);
+        clone.first = null;
+        clone.last = null;
         clone.size = 0;
         clone.modCount = 0;
 
@@ -598,6 +621,9 @@ public class MinHeap extends AbstractList<String> implements List<String>, Clone
         }
         return null;
     }
+
+
+
 
     private class Itr implements Iterator<String> {
         /**

@@ -304,6 +304,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         return unlink(node(index));
     }
 
+    //TODO запретить удалять корень
     public boolean remove(Object o) {
         if (o == null) {
             for (Node<String> x = first; x != null; x = x.next) {
@@ -719,6 +720,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             return nextIndex - 1;
         }
 
+        //TODO реализовать правильное удаление
         public void remove() {
             checkForComodification();
             if (lastReturned == null)

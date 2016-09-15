@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/MinHeap.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +85,8 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2463">
-              <caret line="224" column="35" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+            <state relative-caret-position="612">
+              <caret line="306" column="35" selection-start-line="306" selection-start-column="35" selection-end-line="306" selection-end-column="35" />
               <folding>
                 <element signature="docComment;class#Solution#0" expanded="false" />
                 <element signature="method#getParent#0;class#Solution#0" expanded="false" />
@@ -112,12 +112,13 @@
                 <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
+                <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="class#Node#0;class#Solution#0" expanded="false" />
-                <marker date="1473950444460" expanded="false" signature="128:1674" ph="..." />
-                <marker date="1473950444460" expanded="false" signature="1885:9367" ph="{...}" />
+                <marker date="1473950914218" expanded="false" signature="128:1674" ph="..." />
+                <marker date="1473950914218" expanded="false" signature="1885:9367" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1138,7 +1139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473932128701</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="level20.lesson10. save">
+      <created>1473950829024</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1473950829024</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1735,12 +1743,13 @@
             <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="class#Node#0;class#Solution#0" expanded="false" />
-            <marker date="1473950444460" expanded="false" signature="128:1674" ph="..." />
-            <marker date="1473950444460" expanded="false" signature="1885:9367" ph="{...}" />
+            <marker date="1473950914218" expanded="false" signature="128:1674" ph="..." />
+            <marker date="1473950914218" expanded="false" signature="1885:9367" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1755,8 +1764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2463">
-          <caret line="224" column="35" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+        <state relative-caret-position="612">
+          <caret line="306" column="35" selection-start-line="306" selection-start-column="35" selection-end-line="306" selection-end-column="35" />
           <folding>
             <element signature="docComment;class#Solution#0" expanded="false" />
             <element signature="method#getParent#0;class#Solution#0" expanded="false" />
@@ -1782,12 +1791,13 @@
             <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="class#Node#0;class#Solution#0" expanded="false" />
-            <marker date="1473950444460" expanded="false" signature="128:1674" ph="..." />
-            <marker date="1473950444460" expanded="false" signature="1885:9367" ph="{...}" />
+            <marker date="1473950914218" expanded="false" signature="128:1674" ph="..." />
+            <marker date="1473950914218" expanded="false" signature="1885:9367" ph="{...}" />
           </folding>
         </state>
       </provider>

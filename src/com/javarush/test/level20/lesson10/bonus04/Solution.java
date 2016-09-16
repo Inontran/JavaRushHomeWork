@@ -227,6 +227,47 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     transient private Node<String> last;
     transient private String rootItem = "root_item";
 
+    public void displayTree() {
+        Stack globalStack = new Stack();
+        globalStack.push(first);
+        int nBlanks = 32;
+        boolean isRowEmpty = false;
+        System.out.println(
+                "......................................................");
+        while (isRowEmpty == false) {
+            Stack localStack = new Stack();
+            isRowEmpty = true;
+
+            for (int j = 0; j < nBlanks; j++)
+                System.out.print(' ');
+
+            while (globalStack.isEmpty() == false) {
+                Node temp = (Node) globalStack.pop();
+                if (temp != null) {
+                    System.out.print(temp.item);
+                    localStack.push(temp.leftLeaf);
+                    localStack.push(temp.rightLeaf);
+
+                    if (temp.leftLeaf != null ||
+                            temp.rightLeaf != null)
+                        isRowEmpty = false;
+                } else {
+                    System.out.print("--");
+                    localStack.push(null);
+                    localStack.push(null);
+                }
+                for (int j = 0; j < nBlanks * 2 - 2; j++)
+                    System.out.print(' ');
+            }  // end while globalStack not empty
+            System.out.println();
+            nBlanks /= 2;
+            while (localStack.isEmpty() == false)
+                globalStack.push(localStack.pop());
+        }  // end while isRowEmpty is false
+        System.out.println(
+                "......................................................");
+    }  // end displayTree()
+
     public Solution()
     {
         add(rootItem);
@@ -304,8 +345,8 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         return unlink(node(index));
     }
 
-    //TODO запретить удалять корень
     public boolean remove(Object o) {
+        if (o.equals(rootItem)) return false;
         if (o == null) {
             for (Node<String> x = first; x != null; x = x.next) {
                 if (x.item == null) {
@@ -720,7 +761,6 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
             return nextIndex - 1;
         }
 
-        //TODO реализовать правильное удаление
         public void remove() {
             checkForComodification();
             if (lastReturned == null)

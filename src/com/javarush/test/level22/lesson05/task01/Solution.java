@@ -15,17 +15,28 @@ public class Solution {
 
     public static void main(String[] args) throws TooShortStringException
     {
-        System.out.println(getPartOfString("JavaRush - лучший сервис wer wer  wer"));
+        System.out.println(getPartOfString("JavaRush - лучший сервис qwe qwe "));
     }
 
-    public static String getPartOfString(String string) throws TooShortStringException
+    public static String getPartOfString(String string)
     {
-        String partString = "";
-        int startIndex = string.indexOf(" ");
-        if (startIndex == -1) throw new TooShortStringException();
-
-
-        return partString;
+        try
+        {
+            int startIndex = string.indexOf(" ");
+            int endIndex = startIndex;
+            if (startIndex == -1) throw new TooShortStringException();
+            for (int i = 1; i <= 4; i++)
+            {
+                endIndex = string.indexOf(" ", endIndex + 1);
+                if (endIndex == -1) throw new TooShortStringException();
+            }
+            return string.substring(startIndex + 1, endIndex);
+        }
+        catch (TooShortStringException e)
+        {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     public static class TooShortStringException extends Exception{

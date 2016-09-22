@@ -13,8 +13,9 @@ public class Task implements Runnable {
     public void run() {
         String name = Thread.currentThread().getName();
         String str = this.initialString;
-        do {
-            System.out.println(name + str);
-        } while ((str = solution.getPartOfString(str, name)) != null || !str.isEmpty());
+        System.out.println( solution.getPartOfString(str, name) );
+//        do {
+//            System.out.println(name + str);
+//        } while ((str = solution.getPartOfString(str, name)) != null || !str.isEmpty());
     }
 }

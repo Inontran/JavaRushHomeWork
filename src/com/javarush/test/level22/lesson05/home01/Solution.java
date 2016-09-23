@@ -30,7 +30,7 @@ public class Solution {
     protected void initThreads() {
         this.thread1 = new Thread(new Task(this, "A\tB\tC\tD\tE\tF\tG\tH\tI"), FIRST_THREAD_NAME);
         this.thread2 = new Thread(new Task(this, "J\tK\tL\tM\tN\tO\tP\tQ\tR\tS\tT\tU\tV\tW\tX\tY\tZ"), SECOND_THREAD_NAME);
-        this.thread3 = new Thread(new Task(this, "\t\t"), "3#");
+        this.thread3 = new Thread(new Task(this, null), "3#");
 
         Thread.setDefaultUncaughtExceptionHandler(new ThisUncaughtExceptionHandler());
 
@@ -42,6 +42,7 @@ public class Solution {
     public String getPartOfString(String string, String threadName) {
         try
         {
+//            if (string == null || string.equals("")) throw new Exception();
             int startIndex = string.indexOf("\t");
             int currentIndex = startIndex;
             int endIndex = 0;
@@ -51,7 +52,9 @@ public class Solution {
                 currentIndex = string.indexOf("\t", currentIndex+1);
             }
             if (startIndex+1 == endIndex) return "";
-            return string.substring(startIndex + 1, endIndex);
+            String result = string.substring(startIndex + 1, endIndex);
+            if (result == null) throw new Exception();
+            return result;
         }
         catch (Exception e){
             if (threadName.equals(FIRST_THREAD_NAME)) throw new TooShortStringFirstThreadException();

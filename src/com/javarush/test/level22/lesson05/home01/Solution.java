@@ -42,7 +42,6 @@ public class Solution {
     public String getPartOfString(String string, String threadName) {
         try
         {
-//            if (string == null || string.equals("")) throw new Exception();
             int startIndex = string.indexOf("\t");
             int currentIndex = startIndex;
             int endIndex = 0;
@@ -57,9 +56,9 @@ public class Solution {
             return result;
         }
         catch (Exception e){
-            if (threadName.equals(FIRST_THREAD_NAME)) throw new TooShortStringFirstThreadException();
-            else if (threadName.equals(SECOND_THREAD_NAME)) throw new TooShortStringSecondThreadException();
-            else throw new RuntimeException();
+            if (FIRST_THREAD_NAME.equals(threadName)) throw new TooShortStringFirstThreadException(e);
+            if (SECOND_THREAD_NAME.equals(threadName)) throw new TooShortStringSecondThreadException(e);
+            throw new RuntimeException(e);
         }
     }
 }

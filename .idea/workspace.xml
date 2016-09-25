@@ -4,6 +4,9 @@
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,11 +78,9 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus01/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,74 +91,33 @@
             <state relative-caret-position="289">
               <caret line="268" column="27" selection-start-line="268" selection-start-column="27" selection-end-line="268" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#Solution#0" expanded="false" />
                 <element signature="method#main#0;class#Solution#0" expanded="false" />
                 <element signature="method#displayTree#0;class#Solution#0" expanded="false" />
-                <element signature="e#11144#11145#0" expanded="false" />
-                <element signature="e#11173#11174#0" expanded="false" />
                 <element signature="method#getParent#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#Solution#0" expanded="false" />
-                <element signature="e#12816#12817#0" expanded="false" />
-                <element signature="e#12873#12874#0" expanded="false" />
-                <element signature="e#12941#12942#0" expanded="false" />
-                <element signature="e#12998#12999#0" expanded="false" />
                 <element signature="method#remove#0;class#Solution#0" expanded="false" />
                 <element signature="method#remove#1;class#Solution#0" expanded="false" />
                 <element signature="method#indexOf#0;class#Solution#0" expanded="false" />
                 <element signature="method#lastIndexOf#0;class#Solution#0" expanded="false" />
                 <element signature="method#clear#0;class#Solution#0" expanded="false" />
-                <element signature="e#15691#15692#0" expanded="false" />
-                <element signature="e#15748#15749#0" expanded="false" />
                 <element signature="method#addAll#1;class#Solution#0" expanded="false" />
-                <element signature="e#16063#16064#0" expanded="false" />
-                <element signature="e#16095#16096#0" expanded="false" />
-                <element signature="e#16138#16139#0" expanded="false" />
-                <element signature="e#16167#16168#0" expanded="false" />
-                <element signature="e#16217#16218#0" expanded="false" />
-                <element signature="e#16249#16250#0" expanded="false" />
-                <element signature="e#16304#16305#0" expanded="false" />
-                <element signature="e#16342#16343#0" expanded="false" />
-                <element signature="e#16406#16407#0" expanded="false" />
-                <element signature="e#16447#16448#0" expanded="false" />
-                <element signature="e#16528#16529#0" expanded="false" />
-                <element signature="e#16585#16586#0" expanded="false" />
-                <element signature="e#16665#16666#0" expanded="false" />
-                <element signature="e#16722#16723#0" expanded="false" />
                 <element signature="method#clone#0;class#Solution#0" expanded="false" />
-                <element signature="e#17226#17227#0" expanded="false" />
-                <element signature="e#17283#17284#0" expanded="false" />
                 <element signature="method#checkElementIndex#0;class#Solution#0" expanded="false" />
-                <element signature="e#17495#17496#0" expanded="false" />
-                <element signature="e#17544#17545#0" expanded="false" />
-                <element signature="e#17592#17593#0" expanded="false" />
-                <element signature="e#17646#17647#0" expanded="false" />
                 <element signature="method#node#0;class#Solution#0" expanded="false" />
                 <element signature="method#unlink#0;class#Solution#0" expanded="false" />
                 <element signature="method#linkBefore#0;class#Solution#0" expanded="false" />
                 <element signature="method#linkLast#0;class#Solution#0" expanded="false" />
                 <element signature="method#writeObject#0;class#Solution#0" expanded="false" />
                 <element signature="method#readObject#0;class#Solution#0" expanded="false" />
-                <element signature="e#20295#20296#0" expanded="false" />
-                <element signature="e#20334#20335#0" expanded="false" />
                 <element signature="method#toString#0;class#Solution#0" expanded="false" />
                 <element signature="class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="docComment;field#cursor#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="docComment;field#lastRet#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
-                <element signature="e#21500#21501#0" expanded="false" />
-                <element signature="e#21545#21546#0" expanded="false" />
                 <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
                 <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
-                <element signature="e#23229#23230#0" expanded="false" />
-                <element signature="e#23276#23277#0" expanded="false" />
-                <element signature="e#23645#23646#0" expanded="false" />
-                <element signature="e#23689#23690#0" expanded="false" />
-                <element signature="e#24067#24068#0" expanded="false" />
-                <element signature="e#24107#24108#0" expanded="false" />
-                <element signature="e#24145#24146#0" expanded="false" />
-                <element signature="e#24189#24190#0" expanded="false" />
                 <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
                 <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
@@ -178,29 +138,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThisUncaughtExceptionHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ThisUncaughtExceptionHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="25" column="105" selection-start-line="25" selection-start-column="105" selection-end-line="25" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="59" column="104" selection-start-line="59" selection-start-column="104" selection-end-line="59" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TooShortStringFirstThreadException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               <folding>
-                <element signature="e#785#786#0" expanded="false" />
-                <element signature="e#812#813#0" expanded="false" />
-                <element signature="e#908#909#0" expanded="false" />
-                <element signature="e#935#936#0" expanded="false" />
-                <element signature="e#1030#1031#0" expanded="false" />
-                <element signature="e#1057#1058#0" expanded="false" />
+                <element signature="e#222#223#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java">
+      <file leaf-file-name="TooShortStringSecondThreadException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding>
+                <element signature="e#224#225#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,9 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home09/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home10/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/bonus02/FileConsoleWriter.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/bonus01/Solution.java" />
         <option value="$PROJECT_DIR$/in.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/bonus03/Solution.java" />
@@ -291,6 +265,9 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Task.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java" />
       </list>
     </option>
@@ -355,8 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -457,7 +433,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -809,13 +786,6 @@
       <workItem from="1465367462664" duration="10807000" />
       <workItem from="1465441521004" duration="1819000" />
     </task>
-    <task id="LOCAL-00003" summary="level19.lesson 10. save">
-      <created>1470567686761</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1470567686761</updated>
-    </task>
     <task id="LOCAL-00004" summary="level19.lesson 10. save">
       <created>1470877428914</created>
       <option name="number" value="00004" />
@@ -1152,7 +1122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474554941898</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="level22.lesson05. simple save">
+      <created>1474596007764</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1474596007766</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1169,7 +1146,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1178,10 +1155,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1955836" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19476268" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14641288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14599092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1455,89 +1432,38 @@
         <state relative-caret-position="24">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#Solution#0" expanded="false" />
             <element signature="method#main#0;class#Solution#0" expanded="false" />
             <element signature="method#displayTree#0;class#Solution#0" expanded="false" />
-            <element signature="e#11144#11145#0" expanded="false" />
-            <element signature="e#11173#11174#0" expanded="false" />
             <element signature="method#getParent#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#Solution#0" expanded="false" />
-            <element signature="e#12816#12817#0" expanded="false" />
-            <element signature="e#12873#12874#0" expanded="false" />
-            <element signature="e#12941#12942#0" expanded="false" />
-            <element signature="e#12998#12999#0" expanded="false" />
             <element signature="method#remove#0;class#Solution#0" expanded="false" />
             <element signature="method#remove#1;class#Solution#0" expanded="false" />
             <element signature="method#indexOf#0;class#Solution#0" expanded="false" />
             <element signature="method#lastIndexOf#0;class#Solution#0" expanded="false" />
             <element signature="method#clear#0;class#Solution#0" expanded="false" />
-            <element signature="e#15691#15692#0" expanded="false" />
-            <element signature="e#15748#15749#0" expanded="false" />
             <element signature="method#addAll#1;class#Solution#0" expanded="false" />
-            <element signature="e#16063#16064#0" expanded="false" />
-            <element signature="e#16095#16096#0" expanded="false" />
-            <element signature="e#16138#16139#0" expanded="false" />
-            <element signature="e#16167#16168#0" expanded="false" />
-            <element signature="e#16217#16218#0" expanded="false" />
-            <element signature="e#16249#16250#0" expanded="false" />
-            <element signature="e#16304#16305#0" expanded="false" />
-            <element signature="e#16342#16343#0" expanded="false" />
-            <element signature="e#16406#16407#0" expanded="false" />
-            <element signature="e#16447#16448#0" expanded="false" />
-            <element signature="e#16528#16529#0" expanded="false" />
-            <element signature="e#16585#16586#0" expanded="false" />
-            <element signature="e#16665#16666#0" expanded="false" />
-            <element signature="e#16722#16723#0" expanded="false" />
             <element signature="method#clone#0;class#Solution#0" expanded="false" />
-            <element signature="e#17226#17227#0" expanded="false" />
-            <element signature="e#17283#17284#0" expanded="false" />
             <element signature="method#checkElementIndex#0;class#Solution#0" expanded="false" />
-            <element signature="e#17495#17496#0" expanded="false" />
-            <element signature="e#17544#17545#0" expanded="false" />
-            <element signature="e#17592#17593#0" expanded="false" />
-            <element signature="e#17646#17647#0" expanded="false" />
             <element signature="method#node#0;class#Solution#0" expanded="false" />
             <element signature="method#unlink#0;class#Solution#0" expanded="false" />
             <element signature="method#linkBefore#0;class#Solution#0" expanded="false" />
             <element signature="method#linkLast#0;class#Solution#0" expanded="false" />
             <element signature="method#writeObject#0;class#Solution#0" expanded="false" />
             <element signature="method#readObject#0;class#Solution#0" expanded="false" />
-            <element signature="e#20295#20296#0" expanded="false" />
-            <element signature="e#20334#20335#0" expanded="false" />
             <element signature="method#toString#0;class#Solution#0" expanded="false" />
             <element signature="class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="docComment;field#cursor#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="docComment;field#lastRet#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="e#21500#21501#0" expanded="false" />
-            <element signature="e#21545#21546#0" expanded="false" />
             <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
             <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
-            <element signature="e#23229#23230#0" expanded="false" />
-            <element signature="e#23276#23277#0" expanded="false" />
-            <element signature="e#23645#23646#0" expanded="false" />
-            <element signature="e#23689#23690#0" expanded="false" />
-            <element signature="e#24067#24068#0" expanded="false" />
-            <element signature="e#24107#24108#0" expanded="false" />
-            <element signature="e#24145#24146#0" expanded="false" />
-            <element signature="e#24189#24190#0" expanded="false" />
             <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
             <element signature="class#Node#0;class#Solution#0" expanded="false" />
             <marker date="1473991160449" expanded="false" signature="128:1674" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus01/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1647,125 +1573,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="268" column="27" selection-start-line="268" selection-start-column="27" selection-end-line="268" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#Solution#0" expanded="false" />
-            <element signature="method#main#0;class#Solution#0" expanded="false" />
-            <element signature="method#displayTree#0;class#Solution#0" expanded="false" />
-            <element signature="e#11144#11145#0" expanded="false" />
-            <element signature="e#11173#11174#0" expanded="false" />
-            <element signature="method#getParent#0;class#Solution#0" expanded="false" />
-            <element signature="method#add#0;class#Solution#0" expanded="false" />
-            <element signature="e#12816#12817#0" expanded="false" />
-            <element signature="e#12873#12874#0" expanded="false" />
-            <element signature="e#12941#12942#0" expanded="false" />
-            <element signature="e#12998#12999#0" expanded="false" />
-            <element signature="method#remove#0;class#Solution#0" expanded="false" />
-            <element signature="method#remove#1;class#Solution#0" expanded="false" />
-            <element signature="method#indexOf#0;class#Solution#0" expanded="false" />
-            <element signature="method#lastIndexOf#0;class#Solution#0" expanded="false" />
-            <element signature="method#clear#0;class#Solution#0" expanded="false" />
-            <element signature="e#15691#15692#0" expanded="false" />
-            <element signature="e#15748#15749#0" expanded="false" />
-            <element signature="method#addAll#1;class#Solution#0" expanded="false" />
-            <element signature="e#16063#16064#0" expanded="false" />
-            <element signature="e#16095#16096#0" expanded="false" />
-            <element signature="e#16138#16139#0" expanded="false" />
-            <element signature="e#16167#16168#0" expanded="false" />
-            <element signature="e#16217#16218#0" expanded="false" />
-            <element signature="e#16249#16250#0" expanded="false" />
-            <element signature="e#16304#16305#0" expanded="false" />
-            <element signature="e#16342#16343#0" expanded="false" />
-            <element signature="e#16406#16407#0" expanded="false" />
-            <element signature="e#16447#16448#0" expanded="false" />
-            <element signature="e#16528#16529#0" expanded="false" />
-            <element signature="e#16585#16586#0" expanded="false" />
-            <element signature="e#16665#16666#0" expanded="false" />
-            <element signature="e#16722#16723#0" expanded="false" />
-            <element signature="method#clone#0;class#Solution#0" expanded="false" />
-            <element signature="e#17226#17227#0" expanded="false" />
-            <element signature="e#17283#17284#0" expanded="false" />
-            <element signature="method#checkElementIndex#0;class#Solution#0" expanded="false" />
-            <element signature="e#17495#17496#0" expanded="false" />
-            <element signature="e#17544#17545#0" expanded="false" />
-            <element signature="e#17592#17593#0" expanded="false" />
-            <element signature="e#17646#17647#0" expanded="false" />
-            <element signature="method#node#0;class#Solution#0" expanded="false" />
-            <element signature="method#unlink#0;class#Solution#0" expanded="false" />
-            <element signature="method#linkBefore#0;class#Solution#0" expanded="false" />
-            <element signature="method#linkLast#0;class#Solution#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Solution#0" expanded="false" />
-            <element signature="method#readObject#0;class#Solution#0" expanded="false" />
-            <element signature="e#20295#20296#0" expanded="false" />
-            <element signature="e#20334#20335#0" expanded="false" />
-            <element signature="method#toString#0;class#Solution#0" expanded="false" />
-            <element signature="class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="docComment;field#cursor#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="docComment;field#lastRet#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="e#21500#21501#0" expanded="false" />
-            <element signature="e#21545#21546#0" expanded="false" />
-            <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
-            <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
-            <element signature="e#23229#23230#0" expanded="false" />
-            <element signature="e#23276#23277#0" expanded="false" />
-            <element signature="e#23645#23646#0" expanded="false" />
-            <element signature="e#23689#23690#0" expanded="false" />
-            <element signature="e#24067#24068#0" expanded="false" />
-            <element signature="e#24107#24108#0" expanded="false" />
-            <element signature="e#24145#24146#0" expanded="false" />
-            <element signature="e#24189#24190#0" expanded="false" />
-            <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
-            <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
-            <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
-            <element signature="class#Node#0;class#Solution#0" expanded="false" />
-            <marker date="1473991160449" expanded="false" signature="128:1674" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Calculator.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#1030#1031#0" expanded="false" />
-            <element signature="e#1057#1058#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="9" selection-start-line="10" selection-start-column="8" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="class#TooShortStringException#0;class#Solution#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1785,10 +1597,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus01/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="268" column="27" selection-start-line="268" selection-start-column="27" selection-end-line="268" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;class#Solution#0" expanded="false" />
+            <element signature="method#main#0;class#Solution#0" expanded="false" />
+            <element signature="method#displayTree#0;class#Solution#0" expanded="false" />
+            <element signature="method#getParent#0;class#Solution#0" expanded="false" />
+            <element signature="method#add#0;class#Solution#0" expanded="false" />
+            <element signature="method#remove#0;class#Solution#0" expanded="false" />
+            <element signature="method#remove#1;class#Solution#0" expanded="false" />
+            <element signature="method#indexOf#0;class#Solution#0" expanded="false" />
+            <element signature="method#lastIndexOf#0;class#Solution#0" expanded="false" />
+            <element signature="method#clear#0;class#Solution#0" expanded="false" />
+            <element signature="method#addAll#1;class#Solution#0" expanded="false" />
+            <element signature="method#clone#0;class#Solution#0" expanded="false" />
+            <element signature="method#checkElementIndex#0;class#Solution#0" expanded="false" />
+            <element signature="method#node#0;class#Solution#0" expanded="false" />
+            <element signature="method#unlink#0;class#Solution#0" expanded="false" />
+            <element signature="method#linkBefore#0;class#Solution#0" expanded="false" />
+            <element signature="method#linkLast#0;class#Solution#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Solution#0" expanded="false" />
+            <element signature="method#readObject#0;class#Solution#0" expanded="false" />
+            <element signature="method#toString#0;class#Solution#0" expanded="false" />
+            <element signature="class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="docComment;field#cursor#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="docComment;field#lastRet#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="docComment;field#expectedModCount#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="method#remove#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="method#checkForComodification#0;class#Itr#0;class#Solution#0" expanded="false" />
+            <element signature="class#ListItr#0;class#Solution#0" expanded="false" />
+            <element signature="method#set#0;class#ListItr#0;class#Solution#0" expanded="false" />
+            <element signature="method#add#0;class#ListItr#0;class#Solution#0" expanded="false" />
+            <element signature="method#forEachRemaining#0;class#ListItr#0;class#Solution#0" expanded="false" />
+            <element signature="class#Node#0;class#Solution#0" expanded="false" />
+            <marker date="1473991160449" expanded="false" signature="128:1674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringFirstThreadException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/TooShortStringSecondThreadException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#224#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+        <state relative-caret-position="319">
+          <caret line="59" column="104" selection-start-line="59" selection-start-column="104" selection-end-line="59" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/home01/ThisUncaughtExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="105" selection-start-line="25" selection-start-column="105" selection-end-line="25" selection-end-column="105" />
           <folding />
         </state>
       </provider>

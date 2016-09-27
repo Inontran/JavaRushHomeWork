@@ -1,4 +1,2 @@
-C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt
-рот тор торт о
-о тот тот тот
-C:\Users\sasha\IdeaProjects\JavaRushHomeWork\out.txt
+C:\Users\sasha\IdeaProjects\JavaRushHomeWork\in.txt рот тор торт о
+о тот тот тот C:\Users\sasha\IdeaProjects\JavaRushHomeWork\out.txt

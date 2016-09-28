@@ -1,2 +1,2 @@
-C:\Users\sasha\IdeaProjects\JavaRushHomeWork\in.txt рот тор торт о
-о тот тот тот C:\Users\sasha\IdeaProjects\JavaRushHomeWork\out.txt
+Киев Нью-Йорк Амстердам Вена Мельбурн
+C:\Users\Inontran\IdeaProjects\JavaRushHomeWork\in.txt

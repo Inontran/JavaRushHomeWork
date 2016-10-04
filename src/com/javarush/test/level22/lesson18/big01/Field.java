@@ -15,7 +15,17 @@ public class Field
         this.height = height;
     }
 
-    public void print(){}
+    public void print(){
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < width; i++)
+            {
+                if (matrix[i][j]==0) System.out.print(".");
+                else System.out.print("X");
+            }
+            System.out.println();
+        }
+    }
 
     public void removeFullLines(){}
 

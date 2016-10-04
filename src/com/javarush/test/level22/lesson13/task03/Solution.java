@@ -39,8 +39,8 @@ public class Solution {
     }
 
     public static boolean checkTelNumber(String telNumber) {
-        if ( !telNumber.matches("\\+\\d{12}") ) return false;
-        if ( !telNumber.matches("^[(,\\d]") ) return false;
-        return true;
+        if ( telNumber.matches("^\\+\\d{12}") ) return true;//1) если номер начинается с '+', то он содержит 12 цифр
+        if ( telNumber.matches("^[(,\\d]") ) return true;//2) если номер начинается с цифры или открывающей скобки, то он содержит 10 цифр
+        return false;
     }
 }

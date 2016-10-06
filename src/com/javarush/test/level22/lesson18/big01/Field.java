@@ -141,6 +141,6 @@ public class Field
 
         for (int i = 0; i < height - list.size(); i++) list.addFirst(new int[width]);
 
-        for (int y = 0; y < list.size(); y++) matrix[y] = list.get(y);
+        for (int y = 0; y < height; y++) matrix[y] = list.get(y);
     }
 }

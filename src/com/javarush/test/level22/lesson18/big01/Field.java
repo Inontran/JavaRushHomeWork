@@ -1,7 +1,6 @@
 package com.javarush.test.level22.lesson18.big01;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 /**
  * Класс Field описывает "поле клеток" игры Тетрис
@@ -121,26 +120,31 @@ public class Field
      */
     public void removeFullLines()
     {
-        //Например так:
         //Создаем список для хранения линий
+        ArrayList<int[]> lines = new ArrayList<int[]>();
+
         //Копируем все непустые линии в список.
-        //Добавляем недостающие строки в начало списка.
-        //Преобразуем список обратно в матрицу
-        LinkedList<int[]> list = new LinkedList<>();
-        for (int y = 0; y < height; y++)
+        for (int i = 0; i <height; i++)
         {
-            for (int x = 0; x < width; x++)
+            //подсчитываем количество единиц в строке - просто суммируем все ее значения
+            int count = 0;
+            for (int j = 0; j < width; j++)
             {
-                if (matrix[y][x]==0)
-                {
-                    list.add(matrix[y]);
-                    break;
-                }
+                count += matrix[i][j];
             }
+
+            //Если сумма строки не равно ее ширине - добавляем в список
+            if (count != width)
+                lines.add(matrix[i]);
         }
 
-        for (int i = 0; i < height - list.size(); i++) list.addFirst(new int[width]);
+        //Добавляем недостающие строки в начало списка.
+        while (lines.size()<height)
+        {
+            lines.add(0,new int[width]);
+        }
 
-        for (int y = 0; y < height; y++) matrix[y] = list.get(y);
+        //Преобразуем список обратно в матрицу
+        matrix = lines.toArray(new int[height][width]);
     }
 }

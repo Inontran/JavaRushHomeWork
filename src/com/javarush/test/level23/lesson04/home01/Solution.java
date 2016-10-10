@@ -38,7 +38,7 @@ public class Solution {
         @Override
         public void refreshAllData(Map criteria)
         {
-
+            tasks = DbMock.getFakeTasks(criteria);
         }
     }
 
@@ -47,7 +47,7 @@ public class Solution {
         @Override
         public void refreshAllData(Map criteria)
         {
-
+            names = DbMock.getFakeNames(criteria);
         }
     }
 }

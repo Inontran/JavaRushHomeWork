@@ -21,7 +21,7 @@ public class Solution {
     }
 
 
-    public static class Test1 {
+    public static class Test1 implements Cloneable{
         protected Test1 clone() throws CloneNotSupportedException {
             return (Test1)super.clone();
         }
@@ -33,7 +33,7 @@ public class Solution {
         }
     }
 
-    public static class Test3 {
+    public static class Test3 extends Test2{
         protected Object c1one() throws CloneNotSupportedException {
             return new Test3();
         }

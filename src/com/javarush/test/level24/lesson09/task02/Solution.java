@@ -32,7 +32,7 @@ public class Solution {
         String[] filepart = {"closed {4}", "open {2} and last {3}"};
 
         ChoiceFormat fileform = new ChoiceFormat(filelimits, filepart);
-        Format[] testFormats = {null, dateFormat, fileform};
+        Format[] testFormats = {null, null, dateFormat, fileform};
         MessageFormat pattform = new MessageFormat("{0}   {1} | {5} {6}");
         pattform.setFormats(testFormats);
 
@@ -41,9 +41,9 @@ public class Solution {
             String symbol = (String) stock.get("symbol");
             double open = !stock.containsKey("open") ? 0 : ((double) stock.get("open"));
             double last = !stock.containsKey("last") ? 0 : ((double) stock.get("last"));
-            double change = !stock.containsKey("change") ? 0 : ((double) stock.get("change"));
+//            double change = !stock.containsKey("change") ? 0 : ((double) stock.get("change"));
             Date date = (Date) stock.get("date");
-            Object[] testArgs = {name, symbol, open, last, change, date, date.getTime()};
+            Object[] testArgs = {name, symbol, open, last, date, date.getTime()};
             System.out.println(pattform.format(testArgs));
         }
     }
@@ -51,17 +51,40 @@ public class Solution {
     public static void sort(List<Stock> list) {
         Collections.sort(list, new Comparator<Stock>() {
             public int compare(Stock stock1, Stock stock2) {
-                int resultOfCompareName = String.valueOf(stock1.get("name")).compareTo( String.valueOf(stock2.get("name")) );
-                int resultOfCompareDate = 0;
-                Date date = new Date(Date.parse(String.valueOf(stock1.get("date"))));
-
-                if ( String.valueOf(stock1.get("name")).compareTo( String.valueOf(stock2.get("name")) ) == 0 )
-                {
-
+                String name1 = ((String) stock1.get("name"));
+                String name2 = ((String) stock2.get("name"));
+                int compareResult = name1.compareTo(name2);
+                if (compareResult != 0) {
+                    return compareResult;
+                } else {
+                    Date date1 = (Date) stock1.get("date");
+                    Date date2 = (Date) stock2.get("date");
+                    SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
+                    int dCompResult = df.format(date1).compareTo(df.format(date2));
+                    if (dCompResult != 0) {
+                        return (-dCompResult);
+                    } else {
+                        double open;
+                        double last;
+                        double profit1;
+                        double profit2;
+                        if (stock1.containsKey("open")) {
+                            open = ((double) stock1.get("open"));
+                            last = ((double) stock1.get("last"));
+                            profit1 = last - open;
+                        } else {
+                            profit1 = ((double) stock1.get("change"));
+                        }
+                        if (stock2.containsKey("open")) {
+                            open = ((double) stock2.get("open"));
+                            last = ((double) stock2.get("last"));
+                            profit2 = last - open;
+                        } else {
+                            profit2 = ((double) stock2.get("change"));
+                        }
+                        return (-Double.compare(profit1, profit2));
+                    }
                 }
-                else
-                stock1.get("");
-                return 0;
             }
         });
     }

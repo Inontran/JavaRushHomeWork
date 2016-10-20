@@ -3,11 +3,151 @@ package com.javarush.test.level25.lesson02.home01;
 import java.util.LinkedList;
 import java.util.List;
 
-public enum Column {
-    Customer("Customer"),
-    BankName("Bank Name"),
-    AccountNumber("Account Number"),
-    Amount("Available Amount");
+public enum Column implements Columnable{
+    Customer("Customer")
+            {
+                @Override
+                public String getColumnName()
+                {
+                    return "Customer";
+                }
+
+                @Override
+                public boolean isShown()
+                {
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                @Override
+                public void hide()
+                {
+                    boolean flag = false;
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            realOrder[i] = -1;
+                            flag = true;
+                        }
+                        if (flag) realOrder[i] -= 1;
+                    }
+                }
+            },
+    BankName("Bank Name")
+            {
+                @Override
+                public String getColumnName()
+                {
+                    return "Bank Name";
+                }
+
+                @Override
+                public boolean isShown()
+                {
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                @Override
+                public void hide()
+                {
+                    boolean flag = false;
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            realOrder[i] = -1;
+                            flag = true;
+                        }
+                        if (flag) realOrder[i] -= 1;
+                    }
+                }
+            },
+    AccountNumber("Account Number")
+            {
+                @Override
+                public String getColumnName()
+                {
+                    return "Account Number";
+                }
+
+                @Override
+                public boolean isShown()
+                {
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                @Override
+                public void hide()
+                {
+                    boolean flag = false;
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            realOrder[i] = -1;
+                            flag = true;
+                        }
+                        if (flag) realOrder[i] -= 1;
+                    }
+                }
+            },
+    Amount("Available Amount")
+            {
+                @Override
+                public String getColumnName()
+                {
+                    return "Available Amount";
+                }
+
+                @Override
+                public boolean isShown()
+                {
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                @Override
+                public void hide()
+                {
+                    boolean flag = false;
+                    for (int i = 0; i < realOrder.length; i++)
+                    {
+                        if (realOrder[i] == ordinal())
+                        {
+                            realOrder[i] = -1;
+                            flag = true;
+                        }
+                        if (flag) realOrder[i] -= 1;
+                    }
+                }
+            };
 
     private String columnName;
 
@@ -50,7 +190,10 @@ public enum Column {
      */
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
-
+        for (Column column : values())
+        {
+            if (realOrder[column.ordinal()] != -1) result.add(column);
+        }
         return result;
     }
 }

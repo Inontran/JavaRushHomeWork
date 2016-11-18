@@ -10,6 +10,9 @@ public class Solution {
     int var2;
     int var3;
     int var4;
+    private final Object object1 = new Object();
+    private final Object object2 = new Object();
+
 
     public Solution(int var1, int var2, int var3, int var4) {
         this.var1 = var1;
@@ -19,10 +22,16 @@ public class Solution {
     }
 
     public int getSumOfVar1AndVar2() {
-        return var1 + var2;
+        synchronized (object1)
+        {
+            return var1 + var2;
+        }
     }
 
     public int getSumOfVar3AndVar4() {
-        return var3 + var4;
+        synchronized (object2)
+        {
+            return var3 + var4;
+        }
     }
 }

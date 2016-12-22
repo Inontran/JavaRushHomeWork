@@ -13,12 +13,11 @@ public class ConsoleHelper
     {
         try
         {
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-            writer.write(message);
+           System.out.println(message);
         }
         catch (Exception e)
         {
-//            e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
@@ -30,8 +29,42 @@ public class ConsoleHelper
         }
         catch (IOException e)
         {
-//            e.printStackTrace();
+            e.printStackTrace();
+        }
+        return "error";
+    }
+
+    public static String askCurrencyCode()
+    {
+        writeMessage("Enter currency:");
+        String currencyCode = "";
+        while (currencyCode.length() != 3)
+        {
+            currencyCode = readString();
+            if (currencyCode.matches("[a-zA-Z]{3}")) return currencyCode.toUpperCase();
+            else writeMessage("Currency is incorrect! Please enter currency again.");
         }
         return "";
+    }
+
+    public static String[] getValidTwoDigits(String currencyCode)
+    {
+        writeMessage("Enter denomination and count:");
+        String[] parameters;
+        while (true)
+        {
+            parameters = readString().split(" ");
+            try
+            {
+                if ( Integer.parseInt(parameters[0]) < 0 || Integer.parseInt(parameters[1]) < 0 ) throw new Exception();
+            }
+            catch (Exception e)
+            {
+                writeMessage("Data is incorrect! Please enter data again.");
+                continue;
+            }
+            break;
+        }
+        return parameters;
     }
 }

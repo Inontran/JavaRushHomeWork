@@ -67,4 +67,24 @@ public class ConsoleHelper
         }
         return parameters;
     }
+
+    public static Operation askOperation()
+    {
+        writeMessage("Enter type of operation:");
+        String numberOperation = "";
+        while (true)
+        {
+            try
+            {
+                numberOperation = readString();
+                return Operation.getAllowableOperationByOrdinal( Integer.parseInt(numberOperation) );
+            }
+            catch (Exception e)
+            {
+                writeMessage("Data is incorrect! Please enter data again.");
+                continue;
+            }
+//            break;
+        }
+    }
 }

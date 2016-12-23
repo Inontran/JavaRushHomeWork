@@ -27,4 +27,14 @@ public class CurrencyManipulator
         if (!denominations.containsKey(denomination)) denominations.put(denomination, count);
         else denominations.put(denomination, denominations.get(denomination) + count);
     }
+
+    public int getTotalAmount()
+    {
+        int balance = 0;
+        for (Map.Entry<Integer,Integer> pair : denominations.entrySet())
+        {
+            balance += pair.getKey() * pair.getValue();
+        }
+        return balance;
+    }
 }

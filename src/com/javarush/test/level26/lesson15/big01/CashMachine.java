@@ -14,18 +14,7 @@ public class CashMachine
     {
         Locale.setDefault(Locale.ENGLISH);
 
-        String currency = ConsoleHelper.askCurrencyCode();
-        String[] money = ConsoleHelper.getValidTwoDigits(currency);
-        CurrencyManipulator manipulator = new CurrencyManipulator(currency);
-        manipulator.addAmount(Integer.parseInt(money[0]), Integer.parseInt(money[1]));
 
-        System.out.println(manipulator.getTotalAmount());
-
-        currency = ConsoleHelper.askCurrencyCode();
-        money = ConsoleHelper.getValidTwoDigits(currency);
-        manipulator.addAmount(Integer.parseInt(money[0]), Integer.parseInt(money[1]));
-
-        System.out.println(manipulator.getTotalAmount());
     }
 
 

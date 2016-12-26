@@ -24,4 +24,9 @@ public class CurrencyManipulatorFactory
             return newManipulitor;
         }
     }
+
+    public static Map<String, CurrencyManipulator> getAllCurrencyManipulators()
+    {
+        return manipulators;
+    }
 }

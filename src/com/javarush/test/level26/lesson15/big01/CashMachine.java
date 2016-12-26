@@ -1,8 +1,8 @@
 package com.javarush.test.level26.lesson15.big01;
 
-import java.io.BufferedReader;
+import com.javarush.test.level26.lesson15.big01.command.CommandExecutor;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Locale;
 
 /**
@@ -14,7 +14,16 @@ public class CashMachine
     {
         Locale.setDefault(Locale.ENGLISH);
 
-
+        String operation = "";
+        do
+        {
+            System.out.println("Enter type of operation: ");
+            operation = ConsoleHelper.readString().toUpperCase();
+            try
+            {
+                CommandExecutor.execute(Operation.valueOf(operation));
+            } catch (IllegalArgumentException e){}
+        } while ( !operation.equals("EXIT"));
     }
 
 

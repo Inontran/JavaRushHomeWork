@@ -37,4 +37,9 @@ public class CurrencyManipulator
         }
         return balance;
     }
+
+    public boolean hasMoney()
+    {
+        return denominations.isEmpty();
+    }
 }

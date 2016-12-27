@@ -40,6 +40,6 @@ public class CurrencyManipulator
 
     public boolean hasMoney()
     {
-        return denominations.isEmpty();
+        return !denominations.isEmpty();
     }
 }

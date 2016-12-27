@@ -1,8 +1,10 @@
 package com.javarush.test.level26.lesson15.big01.command;
 
+import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.CurrencyManipulator;
 import com.javarush.test.level26.lesson15.big01.CurrencyManipulatorFactory;
 
+import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -13,12 +15,15 @@ class InfoCommand implements Command
     @Override
     public void execute()
     {
-        Map<String, CurrencyManipulator> manipulatorMap = CurrencyManipulatorFactory.getAllCurrencyManipulators();
-
-
-        for (Map.Entry<String, CurrencyManipulator> pair : manipulatorMap.entrySet())
+        boolean moneyAvailable = false;
+        for (CurrencyManipulator c : CurrencyManipulatorFactory.getAllCurrencyManipulators())
         {
-            System.out.println(pair.getKey() + " - " + pair.getValue().getTotalAmount());
+            moneyAvailable = moneyAvailable | c.hasMoney();
+            ConsoleHelper.writeMessage(c.getCurrencyCode() + " - " + c.getTotalAmount());
+        }
+        if (!moneyAvailable)
+        {
+            ConsoleHelper.writeMessage("No money available.");
         }
     }
 }
